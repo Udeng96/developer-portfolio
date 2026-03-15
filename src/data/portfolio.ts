@@ -34,8 +34,11 @@ export interface Career {
   responsibilities: string[];
 }
 
+export type ProjectCategory = "company" | "personal";
+
 export interface Project {
   id: string;
+  category: ProjectCategory;
   title: string;
   description: string;
   image: string;
@@ -46,6 +49,8 @@ export interface Project {
   role: string;
   techStack: string[];
   highlights: string[];
+  liveUrl?: string;
+  githubUrl?: string;
 }
 
 export const profile: Profile = {
@@ -132,8 +137,10 @@ export const careers: Career[] = [
 ];
 
 export const projects: Project[] = [
+  // 회사 프로젝트
   {
-    id: "project-1",
+    id: "company-1",
+    category: "company",
     title: "이커머스 플랫폼",
     description:
       "대규모 온라인 쇼핑몰 플랫폼을 설계 및 개발했습니다. 상품 관리, 주문 처리, 결제 시스템을 담당했으며, 마이크로서비스 아키텍처를 도입하여 서비스 확장성을 개선했습니다.",
@@ -148,7 +155,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "project-2",
+    id: "company-2",
+    category: "company",
     title: "실시간 채팅 애플리케이션",
     description:
       "WebSocket 기반의 실시간 채팅 서비스를 개발했습니다. 그룹 채팅, 파일 공유, 읽음 확인 기능을 구현했으며, 동시 접속자 수 천명을 처리할 수 있는 아키텍처를 설계했습니다.",
@@ -163,7 +171,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "project-3",
+    id: "company-3",
+    category: "company",
     title: "기업 관리 대시보드",
     description:
       "기업 내부용 데이터 관리 대시보드를 개발했습니다. 매출 데이터 시각화, 직원 관리, 프로젝트 트래킹 기능을 포함하며, 직관적인 UI/UX를 통해 업무 효율성을 크게 향상시켰습니다.",
@@ -175,6 +184,41 @@ export const projects: Project[] = [
       "D3.js를 활용한 데이터 시각화 차트 구현",
       "반응형 대시보드 레이아웃 설계",
       "사용자 권한별 접근 제어 시스템 구축",
+    ],
+  },
+  // 개인 프로젝트
+  {
+    id: "personal-1",
+    category: "personal",
+    title: "Actor Portfolio",
+    description:
+      "배우 포트폴리오 풀스택 웹 애플리케이션입니다. 프로필, 필모그래피, 갤러리, 수상 이력을 관리하는 관리자 페이지와 공개 포트폴리오 페이지로 구성되어 있으며, Google Cloud Storage를 통한 이미지 업로드 및 관리 기능을 구현했습니다.",
+    image: "/images/projects/actor-portfolio.png",
+    period: { start: "2026.03", end: "2026.03" },
+    role: "기획 / 풀스택 개발",
+    techStack: ["Spring Boot", "React", "TypeScript", "PostgreSQL", "GCS", "Vite"],
+    highlights: [
+      "Spring Boot + JPA 기반 REST API 설계 및 구현",
+      "React + TypeScript 프론트엔드 (공개 페이지 + 관리자 CRUD)",
+      "Google Cloud Storage 연동 이미지 업로드 시스템",
+      "필모그래피, 갤러리, 수상 이력 CRUD 관리 기능",
+    ],
+    liveUrl: "https://actor-portfolio-green.vercel.app/",
+  },
+  {
+    id: "personal-2",
+    category: "personal",
+    title: "개발자 포트폴리오",
+    description:
+      "Next.js와 Tailwind CSS를 활용한 개인 포트폴리오 웹사이트입니다. 다크/라이트 테마 전환, 반응형 디자인, 원형 차트 기술 스택 시각화 등의 기능을 구현했습니다.",
+    image: "/images/projects/dashboard.svg",
+    period: { start: "2026.03", end: "2026.03" },
+    role: "기획 / 디자인 / 개발",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "next-themes"],
+    highlights: [
+      "다크/라이트 테마 토글 구현",
+      "SVG 기반 원형 차트 스킬 시각화",
+      "반응형 레이아웃 설계",
     ],
   },
 ];
