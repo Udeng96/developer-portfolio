@@ -4,19 +4,87 @@ import Image from "next/image";
 import { useState } from "react";
 import type { Project } from "@/data/portfolio";
 
+function ImageCarousel({ images, alt }: { images: string[]; alt: string }) {
+  const [current, setCurrent] = useState(0);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+
+  const goTo = (idx: number) => {
+    if (idx < 0) setCurrent(images.length - 1);
+    else if (idx >= images.length) setCurrent(0);
+    else setCurrent(idx);
+  };
+
+  return (
+    <div className="relative h-48 bg-skill-bar-bg overflow-hidden group/carousel">
+      <div
+        className="flex h-full transition-transform duration-300 ease-in-out"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+        onTouchStart={(e) => setTouchStartX(e.touches[0].clientX)}
+        onTouchEnd={(e) => {
+          if (touchStartX === null) return;
+          const delta = touchStartX - e.changedTouches[0].clientX;
+          if (Math.abs(delta) > 40) goTo(current + (delta > 0 ? 1 : -1));
+          setTouchStartX(null);
+        }}
+      >
+        {images.map((src, i) => (
+          <div key={i} className="relative w-full h-full flex-shrink-0">
+            <Image src={src} alt={`${alt} ${i + 1}`} fill className="object-cover" />
+          </div>
+        ))}
+      </div>
+
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={() => goTo(current - 1)}
+            className="absolute left-1.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3.5 h-3.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button
+            onClick={() => goTo(current + 1)}
+            className="absolute right-1.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/50 text-white flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-3.5 h-3.5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-1.5 h-1.5 rounded-full transition-colors cursor-pointer ${i === current ? "bg-white" : "bg-white/40"}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
 export default function ProjectCard({ project }: { project: Project }) {
   const [expanded, setExpanded] = useState(false);
+  const images = project.images && project.images.length > 0 ? project.images : null;
 
   return (
     <div className="bg-card-bg border border-card-border rounded-xl overflow-hidden hover:border-accent/30 transition-all group">
-      <div className="relative h-48 bg-skill-bar-bg overflow-hidden p-3">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-contain group-hover:scale-105 transition-transform duration-300 p-3"
-        />
-      </div>
+      {images ? (
+        <ImageCarousel images={images} alt={project.title} />
+      ) : (
+        <div className="relative h-48 bg-skill-bar-bg overflow-hidden p-3">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-contain group-hover:scale-105 transition-transform duration-300 p-3"
+          />
+        </div>
+      )}
 
       <div className="p-6">
         <div className="flex items-center justify-between mb-2">

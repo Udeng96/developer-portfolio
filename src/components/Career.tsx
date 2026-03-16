@@ -34,7 +34,26 @@ export default function Career() {
                       {career.period.start} ~ {career.period.end}
                     </div>
 
-                    <h3 className="text-lg font-semibold mb-1">{career.company}</h3>
+                    <h3 className="text-lg font-semibold mb-1">
+                      {career.website ? (
+                        <a
+                          href={career.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative group/link inline-flex items-center gap-1.5 hover:text-accent transition-colors"
+                        >
+                          {career.company}
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3.5 h-3.5 flex-shrink-0">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                          </svg>
+                          <span className="absolute -bottom-8 left-0 px-2.5 py-1 rounded-md bg-foreground text-background text-xs font-normal whitespace-nowrap opacity-0 group-hover/link:opacity-100 transition-opacity pointer-events-none">
+                            회사 홈페이지로 이동합니다
+                          </span>
+                        </a>
+                      ) : (
+                        career.company
+                      )}
+                    </h3>
                     <p className="text-sm text-accent font-medium mb-3">{career.position}</p>
                     <p className="text-sm text-muted leading-relaxed mb-4">{career.description}</p>
 

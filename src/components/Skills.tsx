@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { skills } from "@/data/portfolio";
 import type { Skill } from "@/data/portfolio";
 
@@ -8,9 +9,16 @@ const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/
 const RADIUS = 40;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-function SkillRing({ skill }: { skill: Skill }) {
+const CATEGORY_COLORS: Record<string, { ring: string; text: string; border: string }> = {
+  Frontend: { ring: "#60a5fa", text: "text-blue-400", border: "hover:border-blue-400/30" },
+  Backend: { ring: "#34d399", text: "text-emerald-400", border: "hover:border-emerald-400/30" },
+  "DevOps & Tools": { ring: "#f97316", text: "text-orange-400", border: "hover:border-orange-400/30" },
+};
+
+function SkillRing({ skill, color, animate }: { skill: Skill; color: string; animate: boolean }) {
   const percent = (skill.level / 5) * 100;
-  const offset = CIRCUMFERENCE - (percent / 100) * CIRCUMFERENCE;
+  const targetOffset = CIRCUMFERENCE - (percent / 100) * CIRCUMFERENCE;
+  const currentOffset = animate ? targetOffset : CIRCUMFERENCE;
 
   return (
     <div className="flex flex-col items-center gap-2 w-24">
@@ -29,12 +37,12 @@ function SkillRing({ skill }: { skill: Skill }) {
             cy="45"
             r={RADIUS}
             fill="none"
-            stroke="var(--skill-bar-fill)"
+            stroke={color}
             strokeWidth="5"
             strokeLinecap="round"
             strokeDasharray={CIRCUMFERENCE}
-            strokeDashoffset={offset}
-            className="transition-all duration-700 ease-out"
+            strokeDashoffset={currentOffset}
+            className="transition-all duration-[2000ms] ease-out"
           />
         </svg>
         <span className="absolute inset-0 flex items-center justify-center">
@@ -60,8 +68,29 @@ function SkillRing({ skill }: { skill: Skill }) {
 }
 
 export default function Skills() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt-bg transition-colors">
+    <section ref={sectionRef} id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-section-alt-bg transition-colors">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4">Skills</h2>
         <p className="text-muted text-center mb-12 max-w-2xl mx-auto">
@@ -69,19 +98,22 @@ export default function Skills() {
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {skills.map((category) => (
-            <div
-              key={category.category}
-              className="bg-card-bg border border-card-border rounded-xl p-6 hover:border-accent/30 transition-colors"
-            >
-              <h3 className="text-lg font-semibold mb-6 text-accent text-center">{category.category}</h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                {category.items.map((skill) => (
-                  <SkillRing key={skill.name} skill={skill} />
-                ))}
+          {skills.map((category) => {
+            const colors = CATEGORY_COLORS[category.category] ?? { ring: "var(--skill-bar-fill)", text: "text-accent", border: "hover:border-accent/30" };
+            return (
+              <div
+                key={category.category}
+                className={`bg-card-bg border border-card-border rounded-xl p-6 ${colors.border} transition-colors`}
+              >
+                <h3 className={`text-lg font-semibold mb-6 ${colors.text} text-center`}>{category.category}</h3>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {category.items.map((skill) => (
+                    <SkillRing key={skill.name} skill={skill} color={colors.ring} animate={visible} />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

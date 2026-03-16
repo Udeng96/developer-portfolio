@@ -32,6 +32,24 @@ export interface Career {
   };
   description: string;
   responsibilities: string[];
+  website?: string;
+}
+
+export interface Education {
+  institution: string;
+  degree: string;
+  period: {
+    start: string;
+    end: string;
+  };
+  description?: string;
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  date: string;
+  description?: string;
 }
 
 export type ProjectCategory = "company" | "personal";
@@ -42,6 +60,7 @@ export interface Project {
   title: string;
   description: string;
   image: string;
+  images?: string[];
   period: {
     start: string;
     end: string;
@@ -54,12 +73,12 @@ export interface Project {
 }
 
 export const profile: Profile = {
-  name: "홍길동",
+  name: "장유정",
   title: "Full-Stack Developer",
   bio: "5년차 풀스택 개발자로, 사용자 경험을 최우선으로 생각하며 확장 가능하고 유지보수하기 쉬운 코드를 작성합니다. 새로운 기술을 배우고 적용하는 것을 즐기며, 팀과의 협업을 통해 더 나은 결과를 만들어냅니다.",
   image: "/images/profile/avatar.svg",
   contacts: [
-    { type: "email", label: "hello@example.com", url: "mailto:hello@example.com" },
+    { type: "email", label: "docovlog@gmail.com", url: "mailto:docovlog@gmail.com" },
     { type: "github", label: "GitHub", url: "https://github.com" },
     { type: "linkedin", label: "LinkedIn", url: "https://linkedin.com" },
   ],
@@ -100,39 +119,34 @@ export const skills: SkillCategory[] = [
 
 export const careers: Career[] = [
   {
-    company: "(주) ABC 테크놀로지",
-    position: "시니어 풀스택 개발자",
-    period: { start: "2023.01", end: "현재" },
-    description: "B2B SaaS 플랫폼 개발팀에서 핵심 서비스 설계 및 개발을 담당하고 있습니다.",
+    company: "이에스이(주) (ESE Co., Ltd.)",
+    position: "대리 / 풀스택 개발자",
+    period: { start: "2021.09", end: "현재" },
+    description: "U-City 통합관제플랫폼, 영상관제솔루션, 시설물관리시스템 등 ICT 솔루션을 개발·공급하는 영상서비스 전문기업에서 풀스택 개발을 담당하고 있습니다.",
     responsibilities: [
-      "마이크로서비스 기반 백엔드 아키텍처 설계 및 구현",
-      "React/Next.js 기반 프론트엔드 개발 리드",
-      "코드 리뷰 및 주니어 개발자 멘토링",
-      "CI/CD 파이프라인 구축 및 배포 자동화",
+      "통합관제플랫폼 및 영상관제솔루션 웹 애플리케이션 개발",
+      "Spring Boot 기반 백엔드 API 설계 및 구현",
+      "React/TypeScript 기반 프론트엔드 개발",
+      "시설물관리시스템, 도면관리시스템 등 SI 프로젝트 참여",
     ],
+    website: "http://www.eseict.com",
   },
+];
+
+export const educations: Education[] = [
   {
-    company: "(주) 디지털 솔루션즈",
-    position: "풀스택 개발자",
-    period: { start: "2021.03", end: "2022.12" },
-    description: "다양한 클라이언트 프로젝트를 수행하며 웹 애플리케이션 개발 전반을 담당했습니다.",
-    responsibilities: [
-      "Spring Boot + React 기반 웹 애플리케이션 개발",
-      "REST API 설계 및 데이터베이스 모델링",
-      "AWS 기반 인프라 구축 및 운영",
-      "애자일 방법론 기반 프로젝트 관리 참여",
-    ],
+    institution: "호서대학교",
+    degree: "컴퓨터공학 이수",
+    period: { start: "2017.03", end: "2021.02" },
+    description: "컴퓨터공학 전공으로 소프트웨어 설계, 데이터베이스, 네트워크 등 전반적인 CS 지식을 학습했습니다.",
   },
+];
+
+export const certifications: Certification[] = [
   {
-    company: "(주) 스타트업 허브",
-    position: "주니어 개발자",
-    period: { start: "2020.01", end: "2021.02" },
-    description: "스타트업 환경에서 빠르게 프로토타입을 개발하고 서비스를 런칭하는 경험을 쌓았습니다.",
-    responsibilities: [
-      "Node.js + Express 기반 백엔드 API 개발",
-      "프론트엔드 UI 컴포넌트 개발 및 유지보수",
-      "데이터베이스 설계 및 쿼리 최적화",
-    ],
+    name: "정보처리기사",
+    issuer: "한국산업인력공단",
+    date: "2021",
   },
 ];
 
@@ -140,6 +154,50 @@ export const projects: Project[] = [
   // 회사 프로젝트
   {
     id: "company-1",
+    category: "company",
+    title: "도시재생 관광 키오스크",
+    description:
+      "남해군 도시재생 사업의 일환으로 관광 정보를 제공하는 터치스크린 키오스크 애플리케이션을 개발했습니다. 관광지 안내, 버스 노선 조회, CCTV 실시간 영상, 날씨 정보 등을 제공하며, 스와이프 기반의 직관적인 터치 UI를 구현했습니다.",
+    image: "/images/projects/kiosk/1.png",
+    images: [
+      "/images/projects/kiosk/1.png",
+      "/images/projects/kiosk/2.png",
+      "/images/projects/kiosk/3.png",
+      "/images/projects/kiosk/4.png",
+    ],
+    period: { start: "2025.01", end: "2025.03" },
+    role: "풀스택 개발자",
+    techStack: ["Spring Boot", "React", "Vite", "Zustand", "Swiper", "JPA"],
+    highlights: [
+      "터치 최적화 멀티페이지 키오스크 UI 개발 (React + Zustand)",
+      "관광지·맛집·바래길 등 카테고리별 콘텐츠 관리 시스템 구축",
+      "CCTV 실시간 영상 스트리밍 연동",
+      "기상청 API 연동 날씨 정보 제공",
+      "콘텐츠 관리자 페이지 개발 (파일 업로드·페이지 편집)",
+    ],
+    githubUrl: "https://github.com/Udeng96/kiosk",
+  },
+  {
+    id: "company-2",
+    category: "company",
+    title: "KAIST GIS 통합관제 플랫폼",
+    description:
+      "KAIST 캠퍼스 통합관제를 위한 GIS 기반 웹 플랫폼을 개발했습니다. Leaflet 기반 지도 위에 CCTV, 건물, 시설물 등을 마커로 표시하고, 이벤트 감지·순찰 관리·WebRTC 영상 스트리밍·즐겨찾기 등의 기능을 구현했습니다.",
+    image: "/images/projects/gis/1.png",
+    period: { start: "2025.04", end: "2025.12" },
+    role: "풀스택 개발자",
+    techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebRTC", "Zustand", "STOMP"],
+    highlights: [
+      "Leaflet + Proj4 기반 GIS 지도 시스템 구현",
+      "WebRTC 실시간 CCTV 영상 스트리밍 연동",
+      "STOMP WebSocket 기반 실시간 이벤트 알림 시스템",
+      "순찰 경로 관리 및 드래그앤드롭 UI 구현",
+      "시설물·건물·CCTV 마커 관리 및 범례 시스템 개발",
+    ],
+    githubUrl: "https://github.com/Udeng96/gis",
+  },
+  {
+    id: "company-4",
     category: "company",
     title: "이커머스 플랫폼",
     description:
@@ -155,7 +213,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "company-2",
+    id: "company-5",
     category: "company",
     title: "실시간 채팅 애플리케이션",
     description:
@@ -171,7 +229,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: "company-3",
+    id: "company-6",
     category: "company",
     title: "기업 관리 대시보드",
     description:
