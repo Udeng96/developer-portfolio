@@ -48,14 +48,19 @@ function SkillRing({ skill, color, animate }: { skill: Skill; color: string; ani
         <span className="absolute inset-0 flex items-center justify-center">
           {skill.icon ? (
             <Image
-              src={`${DEVICON_BASE}${skill.icon}`}
+              src={skill.icon.startsWith("http") ? skill.icon : `${DEVICON_BASE}${skill.icon}`}
               alt={skill.name}
               width={36}
               height={36}
-              className="object-contain"
+              className={`object-contain${skill.icon.startsWith("http") ? " dark:invert" : ""}`}
             />
           ) : (
-            <span className="text-sm font-bold">{percent}%</span>
+            <span
+              className="w-9 h-9 rounded-full flex items-center justify-center text-[11px] font-extrabold"
+              style={{ backgroundColor: `${color}22`, color }}
+            >
+              {skill.name.split(/[\s\/]/).map(w => w[0]).join("").slice(0, 2).toUpperCase()}
+            </span>
           )}
         </span>
       </div>
