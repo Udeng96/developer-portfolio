@@ -9,15 +9,7 @@ const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/
 const RADIUS = 40;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-const CATEGORY_COLOR = { bar: "#6366f1", text: "text-accent", border: "border-card-border" };
-const CATEGORY_COLORS: Record<string, typeof CATEGORY_COLOR> = {
-  Frontend:         CATEGORY_COLOR,
-  Backend:          CATEGORY_COLOR,
-  Database:         CATEGORY_COLOR,
-  "GIS & 시각화":   CATEGORY_COLOR,
-  "실시간 통신":    CATEGORY_COLOR,
-  "DevOps & Tools": CATEGORY_COLOR,
-};
+const CATEGORY_COLOR = "#6366f1";
 
 // 레벨 체계 (일관성)
 const LEVELS = [
@@ -214,19 +206,18 @@ export default function Skills() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((category) => {
-            const colors = CATEGORY_COLORS[category.category] ?? CATEGORY_COLOR;
             return (
               <div
                 key={category.category}
-                className={`bg-card-bg border ${colors.border} rounded-2xl p-6 transition-all duration-300 hover:shadow-lg`}
+                className="bg-card-bg border border-card-border rounded-2xl p-6 transition-all duration-300 hover:shadow-lg"
               >
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-1.5 h-5 rounded-full" style={{ background: colors.bar }} />
-                  <h3 className={`text-base font-bold ${colors.text}`}>{category.category}</h3>
+                  <div className="w-1.5 h-5 rounded-full" style={{ background: CATEGORY_COLOR }} />
+                  <h3 className="text-base font-bold text-accent">{category.category}</h3>
                 </div>
                 <div className="flex flex-wrap justify-center gap-5">
                   {category.items.map((skill) => (
-                    <SkillRing key={skill.name} skill={skill} color={colors.ring} animate={visible} />
+                    <SkillRing key={skill.name} skill={skill} color={CATEGORY_COLOR} animate={visible} />
                   ))}
                 </div>
               </div>
