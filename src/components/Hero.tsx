@@ -55,7 +55,7 @@ export default function Hero() {
         <h1 className="text-3xl md:text-4xl font-bold mb-1 text-center">{profile.name}</h1>
         <p className="text-accent font-medium mb-5 text-center">{profile.title}</p>
 
-        <p className="text-sm text-muted leading-relaxed mb-8 text-center max-w-2xl mx-auto">{profile.bio}</p>
+        <p className="text-sm text-muted leading-relaxed mb-8 text-center max-w-2xl mx-auto whitespace-pre-line">{profile.bio}</p>
 
         {/* 학력/자격증 */}
         <p className="text-xs text-muted font-medium uppercase tracking-wider mb-3 text-center">Education & Certifications</p>

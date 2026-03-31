@@ -93,7 +93,7 @@ export interface Project {
 export const profile: Profile = {
   name: "장유정",
   title: "Full-Stack Developer",
-  bio: "백엔드로 시작해 프론트엔드까지, 서비스 전 과정을 직접 다뤄온 풀스택 개발자입니다. Java/Spring과 React/TypeScript로 4년 5개월간 공공 스마트시티 플랫폼을 개발하며 GIS·실시간 관제·데이터 시각화에 강점을 쌓았습니다. 기능 구현에 그치지 않고, 불편함을 발견하면 구조를 바꾸거나 자동화로 해결합니다. 개발자의 편의가 아닌 사용자의 경험을 기준으로 생각합니다.",
+  bio: "백엔드로 시작해 프론트엔드까지, 서비스 전 과정을 직접 다뤄온 풀스택 개발자입니다.\n\nJava/Spring과 React/TypeScript로 4년 5개월간 공공 스마트시티 플랫폼을 개발하며 GIS·실시간 관제·데이터 시각화에 강점을 쌓아왔고, 개발자의 편의가 아닌 사용자의 경험을 기준으로 생각하는 그런 개발자를 목표로 하고 있습니다.",
   image: "/images/profile/avatar.jpg",
   contacts: [
     { type: "email", label: "docovlog@gmail.com", url: "mailto:docovlog@gmail.com" },
