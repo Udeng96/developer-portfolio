@@ -134,7 +134,7 @@ export const skills: SkillCategory[] = [
         tooltip: "App Router 기반 풀스택 개발 경험 (주간보고서 프로젝트). 서버 컴포넌트, 라우팅, API Routes 활용 가능. 이 포트폴리오 사이트도 Next.js로 제작.",
       },
       {
-        name: "Tailwind CSS", level: 2, icon: "tailwindcss/tailwindcss-original.svg",
+        name: "Tailwind CSS", level: 0.5, icon: "tailwindcss/tailwindcss-original.svg",
         tooltip: "이 포트폴리오 프로젝트에서 유틸리티 클래스 기반 UI 구현. 다크모드, 반응형, 커스텀 테마 설정 경험. 실무 프로젝트는 주로 Styled Components 사용.",
       },
     ],
