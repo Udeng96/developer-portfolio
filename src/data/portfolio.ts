@@ -643,6 +643,38 @@ export const projects: Project[] = [
   },
   // 개인 프로젝트
   {
+    id: "personal-2",
+    category: "personal",
+    title: "ServerWatch — 서버 모니터링 도구",
+    description:
+      "내부망 Linux 서버를 SSH로 실시간 점검하는 데스크톱 모니터링 도구입니다. Claude AI를 활용해 설계·개발하였으며, 기존 2시간 소요되던 수동 점검 작업을 30분으로 단축했습니다.",
+    image: "/images/projects/serverwatch/1.png",
+    images: ["/images/projects/serverwatch/1.png"],
+    period: { start: "2026.03", end: "2026.03" },
+    role: "기획 / 단독 개발",
+    teamSize: "1명 (단독 개발)",
+    techStack: ["Python", "PyQt5", "Paramiko", "PyInstaller", "Claude AI"],
+    purpose: "내부망 Linux 서버 다수를 매번 SSH로 직접 접속해 수작업으로 점검하던 과정이 반복적이고 시간 소모가 컸습니다. 이 과정을 GUI 도구로 자동화하여 점검 시간을 2시간 → 30분으로 대폭 단축했습니다.",
+    highlights: [
+      "Claude AI를 활용한 전체 아키텍처 설계 및 코드 생성",
+      "SSH(Paramiko) 기반 다중 서버 원격 연결 및 서버 목록 저장·관리",
+      "Uptime·CPU·Memory·Disk 사용률을 실시간 게이지 카드로 시각화",
+      "ese@* 서비스·PostgreSQL·Nginx 서비스 상태 일괄 조회",
+      "파티션별 디스크 용량·사용률 테이블 제공",
+      "직접 셸 명령 전송 기능으로 즉각적인 서버 조작 가능",
+      "PyInstaller 기반 macOS 단독 실행 앱(.app) 패키징",
+      "점검 소요 시간 2시간 → 30분으로 단축",
+    ],
+    pages: [
+      {
+        title: "서버 모니터링 대시보드",
+        description: "연결된 서버의 Uptime, CPU, Memory, Disk 사용률을 게이지 카드로 실시간 표시합니다. 서비스 상태(ese@*, PostgreSQL, Nginx) 및 파티션별 디스크 현황을 한 화면에서 확인할 수 있습니다.",
+        image: "/images/projects/serverwatch/1.png",
+      },
+    ],
+    githubUrl: "https://github.com/Udeng96/ServerWatch",
+  },
+  {
     id: "company-0",
     category: "personal",
     title: "KISA 취약점 점검 도구",
