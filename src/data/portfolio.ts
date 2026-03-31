@@ -444,10 +444,10 @@ export const projects: Project[] = [
       "/images/projects/seongnam/2.png",
       "/images/projects/seongnam/3.png",
     ],
-    period: { start: "2023.03", end: "2025.03" },
+    period: { start: "2023.03", end: "2025.04" },
     role: "풀스택 개발자",
     teamSize: "TBD",
-    techStack: ["React", "TypeScript", "Webpack", "Leaflet", "Kakao Maps", "GeoServer", "Highcharts", "Redux Saga", "Zustand", "React Query", "MUI", "react-player"],
+    techStack: ["Spring Boot", "Java", "MyBatis", "PostgreSQL", "WebSocket", "MQTT", "Quartz", "React", "TypeScript", "Webpack", "Leaflet", "Kakao Maps", "GeoServer", "Highcharts", "Redux Saga", "Zustand", "React Query", "MUI", "react-player"],
     purpose: "성남시 스마트시티 인프라 운영 효율화를 위해 GIS 기반 이벤트·CCTV·환경 데이터를 단일 플랫폼에서 통합 관제할 수 있도록 개발되었습니다.",
     highlights: [
       "Leaflet + Kakao Maps + GeoServer 레이어 기반 GIS 통합 관제 지도 구현",
@@ -456,6 +456,9 @@ export const projects: Project[] = [
       "Highcharts 기반 IoT 통계 — 미세먼지·강수량·날씨 현황 차트 시각화",
       "상단바 실시간 기상정보(기온·강수량·미세먼지) 및 기상 리포트 표시",
       "GeoServer 레이어 On/Off, 범례, Wi-Fi 데이터 업로드·다운로드 기능",
+      "Spring WebSocket + Netty 기반 실시간 이벤트 수신 및 MQTT 연동",
+      "Quartz 스케줄러 기반 주차·Wi-Fi 데이터 주기적 수집·동기화",
+      "다중 DB 연동 (PostgreSQL·MySQL·MariaDB·MSSQL·Oracle·Tibero)",
       "Redux Saga + Zustand + React Query 혼합 상태 관리 구조 설계",
     ],
     pages: [
