@@ -128,7 +128,7 @@ function SkillRing({ skill, color, animate }: { skill: Skill; color: string; ani
 
       {/* 이름 + 레벨 라벨 */}
       <div className="text-center">
-        <span className="text-xs font-semibold leading-tight block">{skill.name}</span>
+        <span className="text-xs font-semibold leading-tight block whitespace-nowrap">{skill.name}</span>
         <span className="text-[10px] font-medium mt-0.5 block" style={{ color: levelColor }}>
           {label}
         </span>
