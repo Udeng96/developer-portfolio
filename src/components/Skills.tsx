@@ -9,13 +9,14 @@ const DEVICON_BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/
 const RADIUS = 40;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
-const CATEGORY_COLORS: Record<string, { ring: string; text: string; border: string }> = {
-  Frontend:         { ring: "#60a5fa", text: "text-blue-400",   border: "border-blue-400/20" },
-  Backend:          { ring: "#34d399", text: "text-emerald-400",border: "border-emerald-400/20" },
-  Database:         { ring: "#a78bfa", text: "text-violet-400", border: "border-violet-400/20" },
-  "GIS & 시각화":   { ring: "#38bdf8", text: "text-sky-400",    border: "border-sky-400/20" },
-  "실시간 통신":    { ring: "#f472b6", text: "text-pink-400",   border: "border-pink-400/20" },
-  "DevOps & Tools": { ring: "#fb923c", text: "text-orange-400", border: "border-orange-400/20" },
+const CATEGORY_COLOR = { bar: "#6366f1", text: "text-accent", border: "border-card-border" };
+const CATEGORY_COLORS: Record<string, typeof CATEGORY_COLOR> = {
+  Frontend:         CATEGORY_COLOR,
+  Backend:          CATEGORY_COLOR,
+  Database:         CATEGORY_COLOR,
+  "GIS & 시각화":   CATEGORY_COLOR,
+  "실시간 통신":    CATEGORY_COLOR,
+  "DevOps & Tools": CATEGORY_COLOR,
 };
 
 // 레벨 체계 (일관성)
@@ -213,16 +214,14 @@ export default function Skills() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((category) => {
-            const colors = CATEGORY_COLORS[category.category] ?? {
-              ring: "var(--skill-bar-fill)", text: "text-accent", border: "border-accent/20",
-            };
+            const colors = CATEGORY_COLORS[category.category] ?? CATEGORY_COLOR;
             return (
               <div
                 key={category.category}
                 className={`bg-card-bg border ${colors.border} rounded-2xl p-6 transition-all duration-300 hover:shadow-lg`}
               >
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="w-1.5 h-5 rounded-full" style={{ background: colors.ring }} />
+                  <div className="w-1.5 h-5 rounded-full" style={{ background: colors.bar }} />
                   <h3 className={`text-base font-bold ${colors.text}`}>{category.category}</h3>
                 </div>
                 <div className="flex flex-wrap justify-center gap-5">
