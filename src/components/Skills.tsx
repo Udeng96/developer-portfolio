@@ -167,7 +167,7 @@ function SkillRing({ skill, color, animate }: { skill: Skill; color: string; ani
         {!isPrimary && hasTooltip && (
           <span
             className="absolute -top-1 -right-1 w-4 h-4 rounded-full flex items-center justify-center text-[9px] font-bold text-white z-20"
-            style={{ background: color }}
+            style={{ background: levelInfo.color }}
           >
             i
           </span>
