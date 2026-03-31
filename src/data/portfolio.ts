@@ -294,7 +294,73 @@ export const certifications: Certification[] = [
 
 export const projects: Project[] = [
   // 회사 프로젝트
+
   {
+    id: "company-ssc",
+    category: "company",
+    featured: true,
+    title: "남해군 스마트 경로당 통합관제 플랫폼",
+    description:
+      "남해군 230개소 경로당과 1,800여 개 시설물을 실시간으로 모니터링하는 GIS 기반 통합관제 웹 플랫폼입니다. 화재·비상벨 이벤트 감지, CCTV 영상 관제, 시설물 상태 모니터링, 콘텐츠 스케줄 관리, 통계 대시보드 등을 제공하며, WebSocket 기반 실시간 알림과 다중 데이터베이스 연동을 통해 경로당 운영을 종합 관리합니다.",
+    image: "/images/projects/namhae-ssc/1.png",
+    images: [
+      "/images/projects/namhae-ssc/1.png",
+      "/images/projects/namhae-ssc/2.png",
+      "/images/projects/namhae-ssc/3.png",
+      "/images/projects/namhae-ssc/4.png",
+      "/images/projects/namhae-ssc/5.png",
+    ],
+    period: { start: "2023.06", end: "2026.03" },
+    role: "프로젝트 리더 / 풀스택 개발자",
+    teamSize: "총 3명 (풀스택 3명)",
+    techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebSocket", "Zustand", "PostgreSQL", "Highcharts"],
+    highlights: [
+      "프로젝트 리더로서 3인 팀 기술 방향 수립 및 일정 관리",
+      "TTA 소프트웨어 품질인증(GS인증) 획득",
+      "경남일보·보안뉴스·내외일보·국제뉴스 등 다수 언론 보도",
+    ],
+    features: [
+      "Leaflet 기반 GIS 지도에 경로당·시설물 실시간 상태 표시",
+      "WebSocket 기반 화재·비상벨 이벤트 실시간 알림 시스템",
+      "CCTV 영상 관제 및 시설물 장애 모니터링 대시보드",
+      "콘텐츠 스케줄링 및 경로당별 영상·공지 송출 관리",
+      "Highcharts 기반 이벤트·시설·운영 통계 시각화",
+      "PostgreSQL + MySQL + MariaDB 다중 DB 연동",
+    ],
+    pressLinks: [
+      { source: "보안뉴스", title: "남해군, 3년 동안 스마트경로당 230개소 구축... 스마트경로당 시대 열다", url: "https://m.boannews.com/html/detail.html?idx=140643" },
+      { source: "경남일보", title: "남해군, 스마트경로당 230개소 구축 완료", url: "https://www.gnnews.co.kr/news/articleView.html?idxno=624642" },
+      { source: "내외일보", title: "남해군, 스마트경로당 230개소 구축 완료", url: "https://www.naewoeilbo.com/news/articleView.html?idxno=2253215" },
+      { source: "국제뉴스", title: "남해군 전역에 '스마트경로당 시대' 활짝 피었다", url: "https://www.gukjenews.com/news/articleView.html?idxno=3441638" },
+    ],
+    pages: [
+      {
+        title: "메인 대시보드",
+        description: "남해군 9개 읍·면별 경로당 수와 이벤트 현황을 GIS 지도 위에 실시간으로 표시합니다. 지역 클릭 시 해당 읍·면의 상세 경로당 목록으로 전환됩니다.",
+        image: "/images/projects/namhae-ssc/1.png",
+      },
+      {
+        title: "경로당 이벤트 관제",
+        description: "화재·비상벨 이벤트 목록과 해당 경로당의 CCTV 영상을 동시에 확인합니다. 지도 위 경로당 마커 클릭 시 주변 CCTV 영상이 팝업으로 표시됩니다.",
+        image: "/images/projects/namhae-ssc/2.png",
+      },
+      {
+        title: "시설물 대시보드",
+        description: "경로당별 시설물(비상벨·화재센서·셋톱박스·CCTV 등) 상태를 실시간으로 모니터링하고 장애 이력을 관리합니다.",
+        image: "/images/projects/namhae-ssc/3.png",
+      },
+      {
+        title: "콘텐츠 스케줄 관리",
+        description: "경로당 TV에 표출할 영상 콘텐츠와 공지 알림을 업로드하고, 지역별·날짜별로 스케줄을 설정합니다.",
+        image: "/images/projects/namhae-ssc/4.png",
+      },
+      {
+        title: "통계",
+        description: "이벤트 발생 현황, 지역별 비상벨 통계, 경로당 TOP10 발생률 등을 Highcharts 기반 차트로 시각화합니다.",
+        image: "/images/projects/namhae-ssc/5.png",
+      },
+    ],
+  },  {
     id: "company-2",
     category: "company",
     title: "KAIST GIS 통합관제 플랫폼",
@@ -589,72 +655,6 @@ export const projects: Project[] = [
         title: "유동인구 — 유입/유출 현황",
         description: "기준 지역 선택 시 leaflet.migration 레이어로 인구 유입·유출 이동 경로를 지도 위에 시각화합니다. 우측 패널에서 출발지·도착지별 이동량 테이블과 체류 시간 분포 도넛 차트를 제공합니다.",
         image: "/images/projects/hwaseong-fps/4.png",
-      },
-    ],
-  },
-  {
-    id: "company-ssc",
-    category: "company",
-    featured: true,
-    title: "남해군 스마트 경로당 통합관제 플랫폼",
-    description:
-      "남해군 230개소 경로당과 1,800여 개 시설물을 실시간으로 모니터링하는 GIS 기반 통합관제 웹 플랫폼입니다. 화재·비상벨 이벤트 감지, CCTV 영상 관제, 시설물 상태 모니터링, 콘텐츠 스케줄 관리, 통계 대시보드 등을 제공하며, WebSocket 기반 실시간 알림과 다중 데이터베이스 연동을 통해 경로당 운영을 종합 관리합니다.",
-    image: "/images/projects/namhae-ssc/1.png",
-    images: [
-      "/images/projects/namhae-ssc/1.png",
-      "/images/projects/namhae-ssc/2.png",
-      "/images/projects/namhae-ssc/3.png",
-      "/images/projects/namhae-ssc/4.png",
-      "/images/projects/namhae-ssc/5.png",
-    ],
-    period: { start: "2023.06", end: "2026.03" },
-    role: "프로젝트 리더 / 풀스택 개발자",
-    teamSize: "총 3명 (풀스택 3명)",
-    techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebSocket", "Zustand", "PostgreSQL", "Highcharts"],
-    highlights: [
-      "프로젝트 리더로서 3인 팀 기술 방향 수립 및 일정 관리",
-      "TTA 소프트웨어 품질인증(GS인증) 획득",
-      "경남일보·보안뉴스·내외일보·국제뉴스 등 다수 언론 보도",
-    ],
-    features: [
-      "Leaflet 기반 GIS 지도에 경로당·시설물 실시간 상태 표시",
-      "WebSocket 기반 화재·비상벨 이벤트 실시간 알림 시스템",
-      "CCTV 영상 관제 및 시설물 장애 모니터링 대시보드",
-      "콘텐츠 스케줄링 및 경로당별 영상·공지 송출 관리",
-      "Highcharts 기반 이벤트·시설·운영 통계 시각화",
-      "PostgreSQL + MySQL + MariaDB 다중 DB 연동",
-    ],
-    pressLinks: [
-      { source: "보안뉴스", title: "남해군, 3년 동안 스마트경로당 230개소 구축... 스마트경로당 시대 열다", url: "https://m.boannews.com/html/detail.html?idx=140643" },
-      { source: "경남일보", title: "남해군, 스마트경로당 230개소 구축 완료", url: "https://www.gnnews.co.kr/news/articleView.html?idxno=624642" },
-      { source: "내외일보", title: "남해군, 스마트경로당 230개소 구축 완료", url: "https://www.naewoeilbo.com/news/articleView.html?idxno=2253215" },
-      { source: "국제뉴스", title: "남해군 전역에 '스마트경로당 시대' 활짝 피었다", url: "https://www.gukjenews.com/news/articleView.html?idxno=3441638" },
-    ],
-    pages: [
-      {
-        title: "메인 대시보드",
-        description: "남해군 9개 읍·면별 경로당 수와 이벤트 현황을 GIS 지도 위에 실시간으로 표시합니다. 지역 클릭 시 해당 읍·면의 상세 경로당 목록으로 전환됩니다.",
-        image: "/images/projects/namhae-ssc/1.png",
-      },
-      {
-        title: "경로당 이벤트 관제",
-        description: "화재·비상벨 이벤트 목록과 해당 경로당의 CCTV 영상을 동시에 확인합니다. 지도 위 경로당 마커 클릭 시 주변 CCTV 영상이 팝업으로 표시됩니다.",
-        image: "/images/projects/namhae-ssc/2.png",
-      },
-      {
-        title: "시설물 대시보드",
-        description: "경로당별 시설물(비상벨·화재센서·셋톱박스·CCTV 등) 상태를 실시간으로 모니터링하고 장애 이력을 관리합니다.",
-        image: "/images/projects/namhae-ssc/3.png",
-      },
-      {
-        title: "콘텐츠 스케줄 관리",
-        description: "경로당 TV에 표출할 영상 콘텐츠와 공지 알림을 업로드하고, 지역별·날짜별로 스케줄을 설정합니다.",
-        image: "/images/projects/namhae-ssc/4.png",
-      },
-      {
-        title: "통계",
-        description: "이벤트 발생 현황, 지역별 비상벨 통계, 경로당 TOP10 발생률 등을 Highcharts 기반 차트로 시각화합니다.",
-        image: "/images/projects/namhae-ssc/5.png",
       },
     ],
   },
