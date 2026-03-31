@@ -114,12 +114,12 @@ export const skills: SkillCategory[] = [
         tooltip: "모든 React 프로젝트에 TypeScript 적용. 인터페이스·제네릭 설계, API 응답 타입 정의, 런타임 오류 사전 차단 등 타입 안정성 확보에 적극 활용.",
       },
       {
-        name: "Next.js", level: 2, icon: "nextjs/nextjs-original.svg",
-        tooltip: "App Router 기반 풀스택 개발 경험 (주간보고서 프로젝트). 서버 컴포넌트, 라우팅, API Routes 활용 가능. 이 포트폴리오 사이트도 Next.js로 제작.",
-      },
-      {
         name: "Zustand", level: 5,
         tooltip: "관제 시스템의 GIS 상태, 실시간 이벤트 필터, 선택된 마커 등 복잡한 전역 상태를 Zustand로 관리. Slice 패턴으로 모듈 분리 및 devtools 연동. 팀 내 상태 관리 표준으로 도입 주도.",
+      },
+      {
+        name: "HTML/CSS", level: 5, icon: "html5/html5-original.svg",
+        tooltip: "Styled Components, CSS Module, 일반 CSS 등 다양한 방식으로 커스텀 UI 구현. 반응형 레이아웃, 애니메이션, 복잡한 레이어 구조 설계 가능.",
       },
       {
         name: "Redux Saga", level: 4,
@@ -130,8 +130,8 @@ export const skills: SkillCategory[] = [
         tooltip: "주간보고서·성남시 프로젝트에서 서버 상태 캐싱·자동 갱신·로딩/에러 처리에 활용. Redux 대비 보일러플레이트 감소 효과를 실무에서 검증.",
       },
       {
-        name: "HTML/CSS", level: 5, icon: "html5/html5-original.svg",
-        tooltip: "Styled Components, CSS Module, 일반 CSS 등 다양한 방식으로 커스텀 UI 구현. 반응형 레이아웃, 애니메이션, 복잡한 레이어 구조 설계 가능.",
+        name: "Next.js", level: 2, icon: "nextjs/nextjs-original.svg",
+        tooltip: "App Router 기반 풀스택 개발 경험 (주간보고서 프로젝트). 서버 컴포넌트, 라우팅, API Routes 활용 가능. 이 포트폴리오 사이트도 Next.js로 제작.",
       },
       {
         name: "Tailwind CSS", level: 2, icon: "tailwindcss/tailwindcss-original.svg",
@@ -151,16 +151,16 @@ export const skills: SkillCategory[] = [
         tooltip: "Spring Boot 프로젝트 전반의 주력 언어. JPA·MyBatis 엔티티 설계, 서비스 레이어 비즈니스 로직, 예외 처리 구조 등 실무 수준 활용.",
       },
       {
+        name: "Node.js", level: 3, icon: "nodejs/nodejs-original.svg",
+        tooltip: "Fastify 기반 API 서버 운영 및 Next.js 서버 사이드 로직 작성. npm 생태계·패키지 관리 능숙.",
+      },
+      {
         name: "MyBatis", level: 0.5,
         tooltip: "성남시 gisapi 프로젝트 등에서 복잡한 SQL 쿼리가 필요한 경우 MyBatis 활용. 동적 쿼리, 다중 DB 매핑, 프로시저 연동 경험.",
       },
       {
         name: "Python", level: 0.5, icon: "python/python-original.svg",
         tooltip: "ServerWatch(PyQt5·Paramiko 기반 서버 모니터링)와 KISA 취약점 점검 도구(PyQt5·Paramiko·OpenPyXL)를 단독 기획·개발. 데스크톱 GUI 앱 및 SSH 자동화 스크립트 구현 경험.",
-      },
-      {
-        name: "Node.js", level: 3, icon: "nodejs/nodejs-original.svg",
-        tooltip: "Fastify 기반 API 서버 운영 및 Next.js 서버 사이드 로직 작성. npm 생태계·패키지 관리 능숙.",
       },
       {
         name: "Fastify", level: 0.5, icon: "fastify/fastify-original.svg",
