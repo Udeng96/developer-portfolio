@@ -93,11 +93,11 @@ export interface Project {
 export const profile: Profile = {
   name: "장유정",
   title: "Full-Stack Developer",
-  bio: "백엔드로 시작해 프론트엔드까지, 서비스 전 과정을 직접 다뤄온 풀스택 개발자입니다.\n\nJava/Spring과 React/TypeScript로 4년 5개월간 공공 스마트시티 플랫폼을 개발하며 GIS·실시간 관제·데이터 시각화에 강점을 쌓아왔고, 개발자의 편의가 아닌 사용자의 경험을 기준으로 생각하는 그런 개발자를 목표로 하고 있습니다.",
+  bio: "백엔드로 시작해 프론트엔드까지, 서비스 전 과정을 직접 다뤄온 풀스택 개발자입니다.\n\nJava/Spring과 React/TypeScript로 4년 5개월간 공공 스마트시티 플랫폼을 개발하며 GIS·실시간 관제·데이터 시각화에 강점을 쌓아왔고, 개발자의 편의가 아닌 사용자의 경험을 기준으로 생각하는 개발자를 목표로 하고 있습니다.",
   image: "/images/profile/avatar.jpg",
   contacts: [
     { type: "email", label: "docovlog@gmail.com", url: "mailto:docovlog@gmail.com" },
-    { type: "linkedin", label: "LinkedIn", url: "https://linkedin.com" },
+    { type: "github", label: "GitHub", url: "https://github.com/Udeng96" },
   ],
 };
 
@@ -119,15 +119,23 @@ export const skills: SkillCategory[] = [
       },
       {
         name: "Zustand", level: 5,
-        tooltip: "관제 시스템의 GIS 상태, 실시간 이벤트 필터, 선택된 마커 등 복잡한 전역 상태를 Zustand로 관리. Slice 패턴으로 모듈 분리 및 devtools 연동.",
+        tooltip: "관제 시스템의 GIS 상태, 실시간 이벤트 필터, 선택된 마커 등 복잡한 전역 상태를 Zustand로 관리. Slice 패턴으로 모듈 분리 및 devtools 연동. 팀 내 상태 관리 표준으로 도입 주도.",
       },
       {
-        name: "Tailwind CSS", level: 0.5, icon: "tailwindcss/tailwindcss-original.svg",
-        tooltip: "이 포트폴리오 프로젝트에서 기본 유틸리티 클래스 활용 수준. 실무 프로젝트는 주로 Styled Components · CSS Module 사용.",
+        name: "Redux Saga", level: 4,
+        tooltip: "성남시·베트남 땀끼시·경기도 통합관제 등 대규모 관제 플랫폼에서 비동기 사이드이펙트 관리에 활용. 복잡한 API 시퀀스·에러 핸들링·채널 패턴 경험.",
+      },
+      {
+        name: "React Query", level: 3,
+        tooltip: "주간보고서·성남시 프로젝트에서 서버 상태 캐싱·자동 갱신·로딩/에러 처리에 활용. Redux 대비 보일러플레이트 감소 효과를 실무에서 검증.",
       },
       {
         name: "HTML/CSS", level: 5, icon: "html5/html5-original.svg",
         tooltip: "Styled Components, CSS Module, 일반 CSS 등 다양한 방식으로 커스텀 UI 구현. 반응형 레이아웃, 애니메이션, 복잡한 레이어 구조 설계 가능.",
+      },
+      {
+        name: "Tailwind CSS", level: 2, icon: "tailwindcss/tailwindcss-original.svg",
+        tooltip: "이 포트폴리오 프로젝트에서 유틸리티 클래스 기반 UI 구현. 다크모드, 반응형, 커스텀 테마 설정 경험. 실무 프로젝트는 주로 Styled Components 사용.",
       },
     ],
   },
@@ -136,23 +144,27 @@ export const skills: SkillCategory[] = [
     items: [
       {
         name: "Spring Boot", level: 5, icon: "spring/spring-original.svg",
-        tooltip: "10개 프로젝트 중 8개의 백엔드를 Spring Boot로 개발. REST API 설계, 인증/인가, 외부 API 연동(기상청·VWorld), 스케줄러, 파일 업로드 등 실무 전반 경험.",
+        tooltip: "전체 프로젝트의 80% 이상 백엔드를 Spring Boot로 개발. REST API 설계, 인증/인가, 외부 API 연동(기상청·VWorld·Zalo), 스케줄러, 파일 업로드 등 실무 전반 경험.",
       },
       {
         name: "Java", level: 4, icon: "java/java-original.svg",
-        tooltip: "Spring Boot 프로젝트 전반의 주력 언어. JPA 엔티티 설계, 서비스 레이어 비즈니스 로직, 예외 처리 구조 등 실무 수준 활용.",
+        tooltip: "Spring Boot 프로젝트 전반의 주력 언어. JPA·MyBatis 엔티티 설계, 서비스 레이어 비즈니스 로직, 예외 처리 구조 등 실무 수준 활용.",
       },
       {
-        name: "Python", level: 0.5, icon: "python/python-original.svg",
-        tooltip: "KISA 취약점 점검 도구를 PyQt5·Paramiko·OpenPyXL로 개발한 경험. 스크립트 작성 수준으로 활용 가능.",
+        name: "MyBatis", level: 3,
+        tooltip: "성남시 gisapi 프로젝트 등에서 복잡한 SQL 쿼리가 필요한 경우 MyBatis 활용. 동적 쿼리, 다중 DB 매핑, 프로시저 연동 경험.",
       },
       {
-        name: "Fastify", level: 0.5, icon: "fastify/fastify-original.svg",
-        tooltip: "주간보고서 프로젝트 백엔드를 Fastify + Prisma로 구성. 기본 CRUD API 구현 경험 있으나 실무 주력 언어는 아님.",
+        name: "Python", level: 2, icon: "python/python-original.svg",
+        tooltip: "ServerWatch(PyQt5·Paramiko 기반 서버 모니터링)와 KISA 취약점 점검 도구(PyQt5·Paramiko·OpenPyXL)를 단독 기획·개발. 데스크톱 GUI 앱 및 SSH 자동화 스크립트 구현 경험.",
       },
       {
         name: "Node.js", level: 3, icon: "nodejs/nodejs-original.svg",
         tooltip: "Fastify 기반 API 서버 운영 및 Next.js 서버 사이드 로직 작성. npm 생태계·패키지 관리 능숙.",
+      },
+      {
+        name: "Fastify", level: 2, icon: "fastify/fastify-original.svg",
+        tooltip: "주간보고서 프로젝트 백엔드를 Fastify + Prisma + PostgreSQL로 구성. JWT 인증, CRUD API, 스키마 검증 구현.",
       },
     ],
   },
@@ -161,23 +173,23 @@ export const skills: SkillCategory[] = [
     items: [
       {
         name: "PostgreSQL", level: 4, icon: "postgresql/postgresql-original.svg",
-        tooltip: "남해군 스마트 경로당 플랫폼 등 다수 프로젝트에서 메인 DB로 활용. 복잡한 조인 쿼리, 인덱스 설계, JPA와의 연동 경험.",
+        tooltip: "남해군·성남시·베트남 땀끼시·주간보고서 등 다수 프로젝트에서 메인 DB로 활용. 복잡한 조인 쿼리, 인덱스 설계, JPA·MyBatis 연동 경험.",
       },
       {
         name: "MySQL", level: 4, icon: "mysql/mysql-original.svg",
         tooltip: "다수 공공 프로젝트의 주력 DB. 테이블 설계, 인덱스 최적화, JPA 엔티티 매핑 등 실무 전반 경험.",
       },
       {
-        name: "MariaDB", level: 0.5, icon: "mariadb/mariadb-original.svg",
+        name: "JPA", level: 4, icon: "https://cdn.simpleicons.org/hibernate",
+        tooltip: "Spring Boot 프로젝트 전반의 ORM. 연관관계 매핑, JPQL, N+1 문제 인식 및 해결 경험.",
+      },
+      {
+        name: "MariaDB", level: 2, icon: "mariadb/mariadb-original.svg",
         tooltip: "일부 프로젝트에서 MySQL 대체재로 사용. 기본 쿼리 및 연동 경험 수준.",
       },
       {
-        name: "Prisma", level: 0.5, icon: "https://cdn.simpleicons.org/prisma",
-        tooltip: "주간보고서 프로젝트에서 Fastify + PostgreSQL 연동에 Prisma ORM 사용. 기본 CRUD 및 스키마 마이그레이션 경험.",
-      },
-      {
-        name: "JPA", level: 4, icon: "https://cdn.simpleicons.org/hibernate",
-        tooltip: "Spring Boot 프로젝트 전반의 ORM. 연관관계 매핑, JPQL, QueryDSL 기초, N+1 문제 인식 및 해결 경험.",
+        name: "Prisma", level: 2, icon: "https://cdn.simpleicons.org/prisma",
+        tooltip: "주간보고서 프로젝트에서 Fastify + PostgreSQL 연동에 Prisma ORM 사용. 스키마 정의, 마이그레이션, 기본 CRUD 경험.",
       },
     ],
   },
@@ -185,16 +197,28 @@ export const skills: SkillCategory[] = [
     category: "GIS & 시각화",
     items: [
       {
-        name: "Leaflet", level: 4, icon: "https://cdn.simpleicons.org/leaflet",
-        tooltip: "10개 프로젝트 중 7개에서 지도 구현의 핵심 라이브러리로 활용. 커스텀 마커·팝업·레이어·클러스터·히트맵·드로잉 툴 등 고급 기능 구현 경험.",
+        name: "Leaflet", level: 5, icon: "https://cdn.simpleicons.org/leaflet",
+        tooltip: "전체 프로젝트의 절반 이상에서 지도 구현의 핵심 라이브러리로 활용. 커스텀 마커·팝업·레이어·클러스터·히트맵·드로잉 툴·Proj4 좌표 변환 등 고급 기능 다수 구현.",
       },
       {
         name: "Highcharts", level: 4,
-        tooltip: "이벤트 발생 추이, 수위 시계열, 단계별 통계, 유입·유출 대시보드 등 다양한 차트 유형 구현. 실시간 데이터 업데이트 및 커스텀 툴팁 설계 경험.",
+        tooltip: "이벤트 추이, 수위 시계열, 단계별 통계, 경계 침입 분석, 방문자 통계 등 다양한 차트 유형 구현. 성남시·베트남·남해군 등 5개 이상 프로젝트에서 실시간 데이터 연동.",
+      },
+      {
+        name: "Kakao Maps", level: 3,
+        tooltip: "성남시 스마트시티 통합플랫폼에서 Daum/Kakao Maps API 기반 GIS 지도 구현. 지도 타입 전환(일반·위성), 마커 클러스터링, 레이어 오버레이 경험.",
       },
       {
         name: "VWorld", level: 3,
-        tooltip: "화성시·화성특례시 프로젝트에서 국토부 VWorld API 기반 지도 연동. 타일 레이어 설정, 주소 검색, 레이어 전환(일반·위성) 구현.",
+        tooltip: "화성시·화성특례시 프로젝트에서 국토부 VWorld API 기반 지도 연동. 타일 레이어 설정, 주소 검색, 레이어 전환 구현.",
+      },
+      {
+        name: "GeoServer", level: 2,
+        tooltip: "성남시 프로젝트에서 GeoServer WMS/WFS 레이어를 Leaflet에 연동. 레이어 On/Off 제어, 범례 렌더링 구현.",
+      },
+      {
+        name: "Cesium", level: 2,
+        tooltip: "베트남 땀끼시 스마트시티 대시보드에서 Cesium 기반 3D GIS 지도 구현. Resium 래퍼 활용, 3D 공간 데이터 표현 경험.",
       },
     ],
   },
@@ -203,15 +227,19 @@ export const skills: SkillCategory[] = [
     items: [
       {
         name: "WebSocket", level: 4,
-        tooltip: "관제 시스템 전반에서 서버-클라이언트 실시간 이벤트 수신에 활용. 재연결 처리, 메시지 파싱, 상태 동기화 등 운영 환경 경험 다수.",
+        tooltip: "성남시·경기도 통합관제 등 관제 시스템 전반에서 실시간 이벤트 수신에 활용. Spring WebSocket + Netty 기반 서버 구현, 재연결 처리·메시지 파싱·상태 동기화 경험.",
       },
       {
         name: "WebRTC", level: 3, icon: "https://cdn.simpleicons.org/webrtc",
-        tooltip: "KAIST GIS 프로젝트에서 CCTV 실시간 영상 스트리밍 구현. P2P 연결 설정, 시그널링 서버 연동, 영상 스트림 렌더링 경험.",
+        tooltip: "KAIST GIS 프로젝트에서 CCTV 실시간 영상 스트리밍 구현. 초기 영상 호출 시간 8초→3초 단축, 동시 재생 수 3대→8대 개선.",
       },
       {
-        name: "STOMP", level: 1.5,
-        tooltip: "KAIST GIS에서 Spring STOMP 기반 실시간 알림 수신 구현. 구독·발행 패턴 기초 수준 경험.",
+        name: "MQTT", level: 2,
+        tooltip: "성남시 gisapi에서 Eclipse Paho MQTT 클라이언트를 통해 IoT 센서 데이터 수신. 브로커 연결, 토픽 구독, 메시지 파싱 경험.",
+      },
+      {
+        name: "STOMP", level: 2,
+        tooltip: "KAIST GIS에서 Spring STOMP 기반 실시간 알림 수신 구현. 구독·발행 패턴 활용.",
       },
     ],
   },
@@ -227,12 +255,12 @@ export const skills: SkillCategory[] = [
         tooltip: "공공 프로젝트 운영 서버(CentOS·Ubuntu) 배포 및 관리. 서비스 등록, 로그 모니터링, 방화벽 설정, 쉘 스크립트 작성 경험.",
       },
       {
-        name: "Docker", level: 0.5, icon: "docker/docker-original.svg",
-        tooltip: "기본 컨테이너 실행 및 docker-compose를 활용한 개발 환경 구성 수준. 실무 배포에서는 직접 서버 배포 방식 주로 사용.",
+        name: "Vite", level: 4, icon: "vitejs/vitejs-original.svg",
+        tooltip: "화성특례시·CCTV 민원관리·베트남 땀끼시 등 다수 React 프로젝트의 빌드 도구. 개발 서버 설정, 프록시 구성, 빌드 최적화 경험.",
       },
       {
-        name: "Vite", level: 4, icon: "vitejs/vitejs-original.svg",
-        tooltip: "화성특례시·CCTV 민원관리 등 React 프로젝트의 빌드 도구로 활용. 개발 서버 설정, 프록시 구성, 빌드 최적화 경험.",
+        name: "Docker", level: 2, icon: "docker/docker-original.svg",
+        tooltip: "docker-compose를 활용한 PostgreSQL 개발 환경 구성 경험. 기본 컨테이너 실행 및 이미지 관리 수준.",
       },
     ],
   },
