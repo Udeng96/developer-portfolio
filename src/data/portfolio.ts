@@ -433,6 +433,50 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "company-seongnam",
+    category: "company",
+    title: "성남시청 스마트시티 GIS 통합관제 대시보드",
+    description:
+      "성남시청 스마트시티 인프라를 실시간으로 모니터링하는 GIS 기반 통합관제 웹 플랫폼입니다. Leaflet·Kakao Maps·GeoServer 레이어를 기반으로 이벤트 관제, CCTV 다중 영상 플레이어, IoT 환경 통계(미세먼지·강수량·날씨), 레이어 관리 등을 제공합니다.",
+    image: "/images/projects/seongnam/1.png",
+    images: [
+      "/images/projects/seongnam/1.png",
+      "/images/projects/seongnam/2.png",
+      "/images/projects/seongnam/3.png",
+    ],
+    period: { start: "2023.03", end: "2025.03" },
+    role: "풀스택 개발자",
+    teamSize: "TBD",
+    techStack: ["React", "TypeScript", "Webpack", "Leaflet", "Kakao Maps", "GeoServer", "Highcharts", "Redux Saga", "Zustand", "React Query", "MUI", "react-player"],
+    purpose: "성남시 스마트시티 인프라 운영 효율화를 위해 GIS 기반 이벤트·CCTV·환경 데이터를 단일 플랫폼에서 통합 관제할 수 있도록 개발되었습니다.",
+    highlights: [
+      "Leaflet + Kakao Maps + GeoServer 레이어 기반 GIS 통합 관제 지도 구현",
+      "이벤트 목록·알람·검색·상세 모달 등 이벤트 관제 워크플로 전체 구현",
+      "CCTV 다중 영상 플레이어(react-player) — 분할 화면 동시 재생",
+      "Highcharts 기반 IoT 통계 — 미세먼지·강수량·날씨 현황 차트 시각화",
+      "상단바 실시간 기상정보(기온·강수량·미세먼지) 및 기상 리포트 표시",
+      "GeoServer 레이어 On/Off, 범례, Wi-Fi 데이터 업로드·다운로드 기능",
+      "Redux Saga + Zustand + React Query 혼합 상태 관리 구조 설계",
+    ],
+    pages: [
+      {
+        title: "GIS 통합관제 메인",
+        description: "Leaflet·Kakao Maps 기반 GIS 지도 위에 이벤트 마커와 CCTV 위치를 표시합니다. 좌측 패널에서 이벤트·CCTV 목록을 탐색하고, 우측 패널에서 CCTV 영상을 다중 분할로 실시간 시청합니다.",
+        image: "/images/projects/seongnam/1.png",
+      },
+      {
+        title: "IoT 통계 대시보드",
+        description: "Highcharts 기반 이벤트 발생 통계, 미세먼지·강수량 현황, 기상 리포트를 시각화합니다. 기간별 필터와 차트 타입 전환을 지원합니다.",
+        image: "/images/projects/seongnam/2.png",
+      },
+      {
+        title: "레이어 · 범례 관리",
+        description: "GeoServer 레이어를 트리 구조로 On/Off 제어하고, 범례 색상 기준을 확인할 수 있습니다. Wi-Fi 데이터 업로드·다운로드 기능도 제공합니다.",
+        image: "/images/projects/seongnam/3.png",
+      },
+    ],
+  },
+  {
     id: "company-tamky",
     category: "company",
     title: "베트남 꽝남성 땀끼시 스마트시티 대시보드",
