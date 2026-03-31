@@ -445,7 +445,7 @@ export const projects: Project[] = [
       "/images/projects/tamky/3.png",
       "/images/projects/tamky/4.png",
     ],
-    period: { start: "2023.08", end: "2025.11" },
+    period: { start: "2023.08", end: "2024.04" },
     role: "풀스택 개발자",
     teamSize: "3명 (풀스택 3명)",
     techStack: ["Spring Boot", "Java", "JPA", "PostgreSQL", "React", "TypeScript", "Vite", "Leaflet", "Cesium", "Highcharts", "Redux Saga", "i18next"],
