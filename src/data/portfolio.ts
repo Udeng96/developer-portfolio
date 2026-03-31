@@ -433,6 +433,58 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "company-tamky",
+    category: "company",
+    title: "베트남 꽝남성 땀끼시 스마트시티 대시보드",
+    description:
+      "베트남 꽝남성 땀끼시(Tam Kỳ)를 위한 스마트시티 통합 대시보드입니다. Leaflet·Cesium 기반 GIS 지도 위에 경계 침입 감지·방문자 통계·기상 정보·조수위·Wi-Fi 현황 등 도시 인프라 데이터를 실시간으로 시각화합니다. 영어·베트남어 다국어를 지원하며, Highcharts 기반 다양한 통계 차트를 제공합니다.",
+    image: "/images/projects/tamky/1.png",
+    images: [
+      "/images/projects/tamky/1.png",
+      "/images/projects/tamky/2.png",
+      "/images/projects/tamky/3.png",
+      "/images/projects/tamky/4.png",
+    ],
+    period: { start: "2023.08", end: "2025.11" },
+    role: "풀스택 개발자",
+    teamSize: "3명 (풀스택 3명)",
+    techStack: ["Spring Boot", "Java", "JPA", "PostgreSQL", "React", "TypeScript", "Vite", "Leaflet", "Cesium", "Highcharts", "Redux Saga", "i18next"],
+    purpose: "베트남 꽝남성 땀끼시의 스마트시티 인프라(경계 감시·방문자 분석·기상·조수위·Wi-Fi 등)를 통합 모니터링하고, 도시 운영 효율화를 위한 데이터 시각화 플랫폼 구축을 목적으로 개발되었습니다.",
+    highlights: [
+      "Leaflet 기반 GIS 지도 위에 지역별 방문자 현황 마커 및 통계 차트 시각화",
+      "Cesium 3D GIS 연동으로 입체적인 도시 공간 데이터 표현",
+      "경계 침입 감지(Boundary Surveillance) — 구역별 침입·순찰 이벤트 실시간 감지 및 시간대별·주간·월간 통계",
+      "방문자 통계 — 지역별 방문자 수 GIS 지도 표시 및 일별·주별 추이 차트",
+      "기상 대시보드 — OpenWeatherMap API 연동, 현재 기온·습도·강수량 및 5일 예보 표시",
+      "조수위·Wi-Fi 현황 모니터링 모듈 개발",
+      "i18next 기반 영어·베트남어 다국어 지원",
+      "Spring Boot + JPA + PostgreSQL 백엔드 REST API 설계 및 구현",
+      "Highcharts 기반 시간대별·요일별·월별 복합 이벤트 통계 차트 구현",
+    ],
+    pages: [
+      {
+        title: "경계 침입 감지 — 이벤트 그래프",
+        description: "garrison(주둔지)·suburb(외곽) 구역별 침입·순찰 감지 이벤트를 시간대별·주간·월간 Highcharts 라인 차트로 시각화합니다. 이상 패턴을 빠르게 파악할 수 있습니다.",
+        image: "/images/projects/tamky/1.png",
+      },
+      {
+        title: "경계 침입 감지 — 이벤트 카운트",
+        description: "구역·이벤트 유형별 발생 건수를 일별·시간대별·요일별·월별 테이블로 집계합니다. 총계 하이라이트로 이상 다발 시간대를 즉시 확인할 수 있습니다.",
+        image: "/images/projects/tamky/2.png",
+      },
+      {
+        title: "기상 대시보드",
+        description: "땀끼시 현재 기온·습도·강수량·풍속을 실시간으로 표시하고, 시간대별 기온 추이 차트 및 5일 요일별 날씨 예보 카드를 제공합니다.",
+        image: "/images/projects/tamky/3.png",
+      },
+      {
+        title: "방문자 통계",
+        description: "지역(An Mỹ·An Phú·Hòa Thuận 등)별 방문자 수를 GIS 지도 위에 클러스터 마커로 표시하고, 일별·요일별·기간별 방문자 추이를 Highcharts 차트로 시각화합니다.",
+        image: "/images/projects/tamky/4.png",
+      },
+    ],
+  },
+  {
     id: "company-3",
     category: "company",
     title: "화성특례시 스마트도시 통합관제 플랫폼",
