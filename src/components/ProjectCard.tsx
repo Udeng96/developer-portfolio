@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setModalOpen(true)}
-              className="text-sm text-accent hover:text-accent-hover font-medium transition-colors cursor-pointer"
+              className="text-sm px-4 py-1.5 rounded-full bg-accent text-white font-semibold hover:opacity-90 active:scale-95 transition-all cursor-pointer"
             >
               자세히 보기
             </button>
