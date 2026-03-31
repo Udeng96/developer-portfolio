@@ -10,12 +10,12 @@ const RADIUS = 40;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
 
 const CATEGORY_COLORS: Record<string, { ring: string; text: string; border: string }> = {
-  Frontend:         { ring: "#60a5fa", text: "text-blue-400",    border: "border-blue-400/20" },
-  Backend:          { ring: "#34d399", text: "text-emerald-400", border: "border-emerald-400/20" },
-  Database:         { ring: "#a78bfa", text: "text-violet-400",  border: "border-violet-400/20" },
-  "GIS & 시각화":   { ring: "#38bdf8", text: "text-sky-400",     border: "border-sky-400/20" },
-  "실시간 통신":    { ring: "#fb923c", text: "text-orange-400",  border: "border-orange-400/20" },
-  "DevOps & Tools": { ring: "#f97316", text: "text-orange-400",  border: "border-orange-400/20" },
+  Frontend:         { ring: "#60a5fa", text: "text-blue-400",   border: "border-blue-400/20" },
+  Backend:          { ring: "#34d399", text: "text-emerald-400",border: "border-emerald-400/20" },
+  Database:         { ring: "#a78bfa", text: "text-violet-400", border: "border-violet-400/20" },
+  "GIS & 시각화":   { ring: "#38bdf8", text: "text-sky-400",    border: "border-sky-400/20" },
+  "실시간 통신":    { ring: "#f472b6", text: "text-pink-400",   border: "border-pink-400/20" },
+  "DevOps & Tools": { ring: "#fb923c", text: "text-orange-400", border: "border-orange-400/20" },
 };
 
 // 레벨 체계 (일관성)
