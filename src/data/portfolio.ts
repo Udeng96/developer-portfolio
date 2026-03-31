@@ -155,7 +155,7 @@ export const skills: SkillCategory[] = [
         tooltip: "성남시 gisapi 프로젝트 등에서 복잡한 SQL 쿼리가 필요한 경우 MyBatis 활용. 동적 쿼리, 다중 DB 매핑, 프로시저 연동 경험.",
       },
       {
-        name: "Python", level: 2, icon: "python/python-original.svg",
+        name: "Python", level: 0.5, icon: "python/python-original.svg",
         tooltip: "ServerWatch(PyQt5·Paramiko 기반 서버 모니터링)와 KISA 취약점 점검 도구(PyQt5·Paramiko·OpenPyXL)를 단독 기획·개발. 데스크톱 GUI 앱 및 SSH 자동화 스크립트 구현 경험.",
       },
       {
@@ -163,7 +163,7 @@ export const skills: SkillCategory[] = [
         tooltip: "Fastify 기반 API 서버 운영 및 Next.js 서버 사이드 로직 작성. npm 생태계·패키지 관리 능숙.",
       },
       {
-        name: "Fastify", level: 2, icon: "fastify/fastify-original.svg",
+        name: "Fastify", level: 0.5, icon: "fastify/fastify-original.svg",
         tooltip: "주간보고서 프로젝트 백엔드를 Fastify + Prisma + PostgreSQL로 구성. JWT 인증, CRUD API, 스키마 검증 구현.",
       },
     ],
