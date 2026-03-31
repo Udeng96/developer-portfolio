@@ -10,7 +10,6 @@ const INITIAL_SHOW = 3;
 const tabs: { label: string; value: "all" | ProjectCategory }[] = [
   { label: "All", value: "all" },
   { label: "Company", value: "company" },
-  { label: "Personal", value: "personal" },
 ];
 
 export default function Projects() {

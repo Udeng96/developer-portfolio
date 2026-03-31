@@ -53,7 +53,7 @@ export interface Certification {
   description?: string;
 }
 
-export type ProjectCategory = "company" | "personal";
+export type ProjectCategory = "company";
 
 export interface ProjectPage {
   title: string;
@@ -87,7 +87,6 @@ export interface Project {
   pressLinks?: PressLink[];
   pages?: ProjectPage[];
   liveUrl?: string;
-  githubUrl?: string;
 }
 
 export const profile: Profile = {
@@ -97,7 +96,6 @@ export const profile: Profile = {
   image: "/images/profile/avatar.svg",
   contacts: [
     { type: "email", label: "docovlog@gmail.com", url: "mailto:docovlog@gmail.com" },
-    { type: "github", label: "GitHub", url: "https://github.com" },
     { type: "linkedin", label: "LinkedIn", url: "https://linkedin.com" },
   ],
 };
@@ -268,7 +266,7 @@ export const certifications: Certification[] = [
   {
     name: "정보처리기사",
     issuer: "한국산업인력공단",
-    date: "2021",
+    date: "2020.12",
   },
 ];
 
@@ -320,7 +318,6 @@ export const projects: Project[] = [
         image: "/images/projects/gis/5.png",
       },
     ],
-    githubUrl: "https://github.com/Udeng96/gis",
   },
   {
     id: "company-1",
@@ -368,7 +365,6 @@ export const projects: Project[] = [
         image: "/images/projects/kiosk/4.png",
       },
     ],
-    githubUrl: "https://github.com/Udeng96/kiosk",
   },
   {
     id: "company-ssc",
@@ -434,86 +430,6 @@ export const projects: Project[] = [
         image: "/images/projects/namhae-ssc/5.png",
       },
     ],
-  },
-  {
-    id: "company-0",
-    category: "personal",
-    title: "KISA 취약점 점검 도구",
-    description:
-      "KISA 2026 주요정보통신기반시설 기술적 취약점 분석·평가 방법 상세가이드를 기반으로 개발된 보안 점검 자동화 데스크톱 도구입니다. SSH를 통해 대상 서버에 접속하여 50개 점검 항목을 자동 실행하고, 결과를 캡처·판정하여 Excel 보고서로 자동 생성합니다.",
-    image: "/images/projects/kisa/1.png",
-    period: { start: "2026.03", end: "2026.03" },
-    role: "기획 / 단독 개발",
-    teamSize: "1명 (단독 개발)",
-    techStack: ["Python", "PyQt5", "Paramiko", "OpenPyXL", "Pillow", "Claude AI"],
-    purpose: "16대 서버에서 약 90개 항목의 취약점 점검을 수작업으로 진행하던 중, 반복되는 명령어 입력·결과 캡처·보고서 작성에 막대한 시간이 소요되었습니다. 이 과정을 자동화하여 점검 시간을 대폭 단축하고 인적 오류를 줄이기 위해 제작했습니다.",
-    highlights: [
-      "Claude AI를 활용한 점검 항목별 명령어·판정 로직 설계 및 코드 생성",
-      "SSH 원격 접속을 통한 실시간 보안 점검 자동화",
-      "50개 KISA 점검 항목별 명령어 자동 입력·실행·캡처",
-      "터미널 출력 기반 자동 판정 (양호/취약/해당없음)",
-      "취약 항목 자동 조치 및 수동 확인 필요 항목 분리",
-      "스크린샷 포함 Excel 보고서 자동 생성",
-      "다중 서버 순차 점검 지원",
-    ],
-  },
-  // 개인 프로젝트
-  {
-    id: "personal-1",
-    category: "personal",
-    title: "주간보고서 작성기",
-    description:
-      "솔루션 개발 본부의 주간 업무 보고서를 효율적으로 작성·관리하는 풀스택 웹 애플리케이션입니다. pnpm monorepo 구조로 Next.js 프론트엔드와 Fastify 백엔드를 분리하여 개발했으며, 공통 타입을 shared 패키지로 관리합니다.",
-    image: "/images/projects/weekly-report/1.png",
-    images: [
-      "/images/projects/weekly-report/1.png",
-      "/images/projects/weekly-report/2.png",
-      "/images/projects/weekly-report/3.png",
-      "/images/projects/weekly-report/4.png",
-      "/images/projects/weekly-report/5.png",
-    ],
-    period: { start: "2026.03", end: "2026.03" },
-    role: "기획 / 풀스택 개발",
-    teamSize: "1명 (단독 개발)",
-    techStack: ["Next.js", "TypeScript", "Fastify", "Prisma", "PostgreSQL", "Zustand", "React Query", "Tailwind CSS", "Claude AI"],
-    purpose: "회사에서 매주 금요일 해당 주 업무 내역을 정리해 제출해야 하며, 연말에는 프로젝트별 투입 M/M과 업무 내역을 취합해 별도로 보고해야 합니다. 프로젝트가 많아질수록 수기로 관리하기 어려워지는 문제를 해결하고, 주간보고 작성과 연간 공수 집계를 한 곳에서 효율적으로 관리하기 위해 제작했습니다.",
-    highlights: [
-      "Claude AI를 활용한 아키텍처 설계, 코드 생성 및 디버깅 전 과정 지원",
-      "pnpm monorepo 기반 프론트엔드·백엔드·공통 타입 패키지 분리 구성",
-      "Next.js App Router + Zustand + React Query 기반 상태 관리",
-      "Fastify + Prisma ORM 기반 REST API 서버 구현",
-      "JWT 인증(회원가입·로그인·내 정보 조회) 시스템 개발",
-      "프로젝트·주간보고서 CRUD 기능 구현",
-      "Docker Compose 기반 PostgreSQL 개발 환경 구성",
-    ],
-    pages: [
-      {
-        title: "주간보고서 목록",
-        description: "캘린더에서 주 단위로 날짜를 선택하면 해당 주의 업무 목록과 AI 요약이 표시됩니다. 금주 업무 실적과 차주 계획을 한눈에 확인할 수 있습니다.",
-        image: "/images/projects/weekly-report/1.png",
-      },
-      {
-        title: "업무 입력",
-        description: "날짜·시간대·프로젝트를 선택하고 업무 내용을 계층형으로 입력합니다. 등록된 프로젝트를 태그로 선택하거나 직접 입력할 수 있습니다.",
-        image: "/images/projects/weekly-report/2.png",
-      },
-      {
-        title: "보관함",
-        description: "지난 주차 보고서를 주 단위로 보관하고, 언제든지 열어볼 수 있습니다.",
-        image: "/images/projects/weekly-report/3.png",
-      },
-      {
-        title: "프로젝트 관리",
-        description: "담당 프로젝트를 등록·수정·삭제합니다. 프로젝트 코드, 발주처 정보를 관리하며 업무 입력 시 태그로 연동됩니다.",
-        image: "/images/projects/weekly-report/4.png",
-      },
-      {
-        title: "통계",
-        description: "연간 프로젝트별 투입 현황을 월별 캘린더 뷰와 투입 비율 차트로 시각화합니다. M/M(Man-Month) 단위로 공수를 자동 산출합니다.",
-        image: "/images/projects/weekly-report/5.png",
-      },
-    ],
-    githubUrl: "https://github.com/Udeng96/weekly-report",
   },
   {
     id: "company-3",
