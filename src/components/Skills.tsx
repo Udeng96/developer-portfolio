@@ -213,7 +213,7 @@ export default function Skills() {
               >
                 <div className="flex items-center gap-2 mb-6">
                   <div className="w-1.5 h-5 rounded-full" style={{ background: CATEGORY_COLOR }} />
-                  <h3 className="text-base font-bold text-accent">{category.category}</h3>
+                  <h3 className="text-base font-bold" style={{ color: CATEGORY_COLOR }}>{category.category}</h3>
                 </div>
                 <div className="flex flex-wrap justify-center gap-5">
                   {category.items.map((skill) => (
