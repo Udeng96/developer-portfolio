@@ -96,7 +96,7 @@ export const profile: Profile = {
   bio: "백엔드로 시작해 프론트엔드까지, 서비스 전 과정을 직접 다뤄온 풀스택 개발자입니다.\n\nJava/Spring과 React/TypeScript로 4년 5개월간 공공 스마트시티 플랫폼을 개발하며 GIS·실시간 관제·데이터 시각화에 강점을 쌓아왔고, 개발자의 편의가 아닌 사용자의 경험을 기준으로 생각하는 개발자를 목표로 하고 있습니다.",
   image: "/images/profile/avatar.jpg",
   contacts: [
-    { type: "email", label: "docovlog@gmail.com", url: "mailto:docovlog@gmail.com" },
+    { type: "email", label: "jrj60417@naver.com", url: "mailto:jrj60417@naver.com" },
     { type: "github", label: "GitHub", url: "https://github.com/Udeng96" },
   ],
 };
@@ -114,7 +114,7 @@ export const skills: SkillCategory[] = [
         tooltip: "모든 React 프로젝트에 TypeScript 적용. 인터페이스·제네릭 설계, API 응답 타입 정의, 런타임 오류 사전 차단 등 타입 안정성 확보에 적극 활용.",
       },
       {
-        name: "Next.js", level: 4, icon: "nextjs/nextjs-original.svg",
+        name: "Next.js", level: 2, icon: "nextjs/nextjs-original.svg",
         tooltip: "App Router 기반 풀스택 개발 경험 (주간보고서 프로젝트). 서버 컴포넌트, 라우팅, API Routes 활용 가능. 이 포트폴리오 사이트도 Next.js로 제작.",
       },
       {
