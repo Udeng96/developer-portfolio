@@ -97,7 +97,7 @@ function SkillRing({ skill, color, animate }: { skill: Skill; color: string; ani
               <div
                 key={i}
                 className="h-1.5 flex-1 rounded-full"
-                style={{ background: i <= Math.round(skill.level) ? color : "var(--skill-bar-bg)" }}
+                style={{ background: i <= Math.round(skill.level) ? levelInfo.color : "var(--skill-bar-bg)" }}
               />
             ))}
           </div>
@@ -123,13 +123,13 @@ function SkillRing({ skill, color, animate }: { skill: Skill; color: string; ani
           <circle
             cx="45" cy="45" r={RADIUS}
             fill="none"
-            stroke={isPrimary ? levelInfo.color : color}
+            stroke={levelInfo.color}
             strokeWidth="6"
             strokeLinecap="round"
             strokeDasharray={CIRCUMFERENCE}
             strokeDashoffset={currentOffset}
             className="transition-all duration-[2000ms] ease-out"
-            style={{ filter: hovered ? `drop-shadow(0 0 6px ${color})` : "none" }}
+            style={{ filter: hovered ? `drop-shadow(0 0 6px ${levelInfo.color})` : "none" }}
           />
         </svg>
 
@@ -181,7 +181,7 @@ function SkillRing({ skill, color, animate }: { skill: Skill; color: string; ani
           className="text-[10px] font-bold mt-0.5 block"
           style={{ color: levelInfo.color }}
         >
-          {isPrimary ? `★ ${levelInfo.label}` : levelInfo.label}
+          {levelInfo.label}
         </span>
       </div>
     </div>
