@@ -28,9 +28,15 @@ export default function Projects() {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-4">Projects</h2>
-        <p className="text-muted text-center mb-8 max-w-2xl mx-auto">
+        <p className="text-muted text-center mb-4 max-w-2xl mx-auto">
           참여했던 주요 프로젝트들입니다
           <span className="ml-2 text-accent font-medium">총 {filtered.length}개</span>
+        </p>
+        <p className="text-xs text-muted text-center mb-8 flex items-center justify-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-3.5 h-3.5 flex-shrink-0">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+          </svg>
+          사내 프로젝트는 저작권 보호를 위해 GitHub 소스코드를 제공하지 않습니다.
         </p>
 
         <div className="flex justify-center gap-2 mb-12">
