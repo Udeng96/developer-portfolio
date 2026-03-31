@@ -151,7 +151,7 @@ export const skills: SkillCategory[] = [
         tooltip: "Spring Boot 프로젝트 전반의 주력 언어. JPA·MyBatis 엔티티 설계, 서비스 레이어 비즈니스 로직, 예외 처리 구조 등 실무 수준 활용.",
       },
       {
-        name: "MyBatis", level: 3,
+        name: "MyBatis", level: 0.5,
         tooltip: "성남시 gisapi 프로젝트 등에서 복잡한 SQL 쿼리가 필요한 경우 MyBatis 활용. 동적 쿼리, 다중 DB 매핑, 프로시저 연동 경험.",
       },
       {
@@ -188,7 +188,7 @@ export const skills: SkillCategory[] = [
         tooltip: "일부 프로젝트에서 MySQL 대체재로 사용. 기본 쿼리 및 연동 경험 수준.",
       },
       {
-        name: "Prisma", level: 2, icon: "https://cdn.simpleicons.org/prisma",
+        name: "Prisma", level: 0.5, icon: "https://cdn.simpleicons.org/prisma",
         tooltip: "주간보고서 프로젝트에서 Fastify + PostgreSQL 연동에 Prisma ORM 사용. 스키마 정의, 마이그레이션, 기본 CRUD 경험.",
       },
     ],
@@ -213,12 +213,8 @@ export const skills: SkillCategory[] = [
         tooltip: "화성시·화성특례시 프로젝트에서 국토부 VWorld API 기반 지도 연동. 타일 레이어 설정, 주소 검색, 레이어 전환 구현.",
       },
       {
-        name: "GeoServer", level: 2,
+        name: "GeoServer", level: 0.5,
         tooltip: "성남시 프로젝트에서 GeoServer WMS/WFS 레이어를 Leaflet에 연동. 레이어 On/Off 제어, 범례 렌더링 구현.",
-      },
-      {
-        name: "Cesium", level: 2,
-        tooltip: "베트남 땀끼시 스마트시티 대시보드에서 Cesium 기반 3D GIS 지도 구현. Resium 래퍼 활용, 3D 공간 데이터 표현 경험.",
       },
     ],
   },
@@ -232,10 +228,6 @@ export const skills: SkillCategory[] = [
       {
         name: "WebRTC", level: 3, icon: "https://cdn.simpleicons.org/webrtc",
         tooltip: "KAIST GIS 프로젝트에서 CCTV 실시간 영상 스트리밍 구현. 초기 영상 호출 시간 8초→3초 단축, 동시 재생 수 3대→8대 개선.",
-      },
-      {
-        name: "MQTT", level: 2,
-        tooltip: "성남시 gisapi에서 Eclipse Paho MQTT 클라이언트를 통해 IoT 센서 데이터 수신. 브로커 연결, 토픽 구독, 메시지 파싱 경험.",
       },
       {
         name: "STOMP", level: 2,
