@@ -251,7 +251,7 @@ export const skills: SkillCategory[] = [
         tooltip: "화성특례시·CCTV 민원관리·베트남 땀끼시 등 다수 React 프로젝트의 빌드 도구. 개발 서버 설정, 프록시 구성, 빌드 최적화 경험.",
       },
       {
-        name: "Docker", level: 2, icon: "docker/docker-original.svg",
+        name: "Docker", level: 0.5, icon: "docker/docker-original.svg",
         tooltip: "docker-compose를 활용한 PostgreSQL 개발 환경 구성 경험. 기본 컨테이너 실행 및 이미지 관리 수준.",
       },
     ],
