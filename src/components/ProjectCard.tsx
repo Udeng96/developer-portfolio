@@ -19,6 +19,11 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             loading="lazy"
           />
+          {project.featured && (
+            <span className="absolute top-3 left-3 flex items-center gap-1 text-[10px] font-bold px-2 py-1 rounded-full bg-yellow-400/90 text-yellow-900 shadow">
+              ⭐ 대표 프로젝트
+            </span>
+          )}
         </div>
 
         <div className="p-6">

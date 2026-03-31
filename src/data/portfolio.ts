@@ -84,6 +84,7 @@ export interface Project {
   highlights: string[];
   features?: string[];
   purpose?: string;
+  featured?: boolean;
   pressLinks?: PressLink[];
   pages?: ProjectPage[];
   liveUrl?: string;
@@ -543,8 +544,58 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "company-fps",
+    category: "company",
+    title: "화성시 병점동 스마트시티 대시보드",
+    description:
+      "화성시 병점동 일대의 스마트시티 인프라를 통합 모니터링하는 GIS 기반 대시보드입니다. 스마트 가로등 관제와 유동인구 분석 두 모듈로 구성되어 있으며, Leaflet 지도 위에 디바이스 상태·방문객 현황·인구 이동 경로를 실시간으로 시각화합니다.",
+    image: "/images/projects/hwaseong-fps/2.png",
+    images: [
+      "/images/projects/hwaseong-fps/1.png",
+      "/images/projects/hwaseong-fps/2.png",
+      "/images/projects/hwaseong-fps/3.png",
+      "/images/projects/hwaseong-fps/4.png",
+    ],
+    period: { start: "2023.07", end: "2025.02" },
+    role: "풀스택 개발자",
+    teamSize: "2명 (풀스택 2명)",
+    techStack: ["Spring Boot", "Java", "JPA", "React", "TypeScript", "Leaflet", "Highcharts", "Redux Saga", "Styled Components"],
+    purpose: "화성시 병점동 스마트시티 사업의 일환으로 스마트 가로등 디바이스 상태 관제와 유동인구(방문객·이동 경로) 분석을 단일 플랫폼에서 통합 제공하기 위해 개발되었습니다.",
+    highlights: [
+      "스마트 가로등 모듈: Leaflet GIS 지도 위 가로등 디바이스 실시간 상태 마커 및 목록 패널 구현",
+      "유동인구 모듈: 위치별 방문객 수 마커 및 일별·주간·월간 통계 차트 구현",
+      "leaflet.migration 라이브러리 활용 유입·유출 인구 이동 경로 시각화",
+      "위치별 방문객 수 Highcharts 바 차트 + Excel 다운로드 기능 구현",
+      "체류 시간 분포(1~5분·6~10분 등) 도넛 차트 시각화",
+      "CCTV PTZ 플레이어 연동 — 방문객 마커 클릭 시 인근 영상 팝업",
+    ],
+    pages: [
+      {
+        title: "스마트 가로등",
+        description: "병점동 일대 스마트 가로등 디바이스를 Leaflet 지도 위에 마커로 표시하고, 우측 패널에서 행정동별 디바이스 목록과 IoT AP·공공 Wi-Fi·스트리트뷰·LED 등 시설물 상태를 확인합니다.",
+        image: "/images/projects/hwaseong-fps/1.png",
+      },
+      {
+        title: "유동인구 — 위치별 방문객",
+        description: "기준 날짜·기간을 설정하면 위치별 방문객 수가 지도 위 마커로 표시됩니다. 우측 패널에서 전체 방문객 수 합계와 행정구역별 방문객 순위 목록을 실시간으로 확인할 수 있습니다.",
+        image: "/images/projects/hwaseong-fps/2.png",
+      },
+      {
+        title: "위치별 방문객 수 통계",
+        description: "위치별 전일대비·금주·전주 방문객 수를 Highcharts 바 차트로 비교하고, Excel로 다운로드할 수 있습니다. 기간 필터로 일·주·월 단위 데이터를 조회합니다.",
+        image: "/images/projects/hwaseong-fps/3.png",
+      },
+      {
+        title: "유동인구 — 유입/유출 현황",
+        description: "기준 지역 선택 시 leaflet.migration 레이어로 인구 유입·유출 이동 경로를 지도 위에 시각화합니다. 우측 패널에서 출발지·도착지별 이동량 테이블과 체류 시간 분포 도넛 차트를 제공합니다.",
+        image: "/images/projects/hwaseong-fps/4.png",
+      },
+    ],
+  },
+  {
     id: "company-ssc",
     category: "company",
+    featured: true,
     title: "남해군 스마트 경로당 통합관제 플랫폼",
     description:
       "남해군 230개소 경로당과 1,800여 개 시설물을 실시간으로 모니터링하는 GIS 기반 통합관제 웹 플랫폼입니다. 화재·비상벨 이벤트 감지, CCTV 영상 관제, 시설물 상태 모니터링, 콘텐츠 스케줄 관리, 통계 대시보드 등을 제공하며, WebSocket 기반 실시간 알림과 다중 데이터베이스 연동을 통해 경로당 운영을 종합 관리합니다.",
