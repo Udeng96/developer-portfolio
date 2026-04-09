@@ -518,6 +518,7 @@ export const projects: Project[] = [
         image: "/images/projects/hwaseong/5.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/hwaseong-gis",
   },
   {
     id: "company-4",
@@ -559,6 +560,7 @@ export const projects: Project[] = [
         image: "/images/projects/cms/3.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/hwaseong-cms",
   },
   {
     id: "company-tamky",
@@ -611,6 +613,7 @@ export const projects: Project[] = [
         image: "/images/projects/tamky/4.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/vietnam-dashboard",
   },
   {
     id: "company-fps",
@@ -695,6 +698,7 @@ export const projects: Project[] = [
         image: "/images/projects/easapi/2.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/easapi",
   },
   {
     id: "company-seongnam",
@@ -781,6 +785,7 @@ export const projects: Project[] = [
         image: "/images/projects/dst/2.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/dst",
   },
   {
     id: "company-5",
@@ -817,6 +822,7 @@ export const projects: Project[] = [
         image: "/images/projects/reapi/2.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/reapi",
   },
   // 개인 프로젝트
   {
