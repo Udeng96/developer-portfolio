@@ -131,7 +131,7 @@ export const skills: SkillCategory[] = [
         tooltip: "주간보고서·성남시 프로젝트에서 서버 상태 캐싱·자동 갱신·로딩/에러 처리에 활용. Redux 대비 보일러플레이트 감소 효과를 실무에서 검증.",
       },
       {
-        name: "Next.js", level: 2, icon: "nextjs/nextjs-original.svg",
+        name: "Next.js", level: 0.5, icon: "nextjs/nextjs-original.svg",
         tooltip: "App Router 기반 풀스택 개발 경험 (주간보고서 프로젝트). 서버 컴포넌트, 라우팅, API Routes 활용 가능. 이 포트폴리오 사이트도 Next.js로 제작.",
       },
     ],
