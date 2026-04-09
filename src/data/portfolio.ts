@@ -94,7 +94,7 @@ export interface Project {
 export const profile: Profile = {
   name: "장유정",
   title: "Full-Stack Developer",
-  bio: "백엔드로 시작해 프론트엔드까지, 서비스 전 과정을 직접 다뤄온 풀스택 개발자입니다.\n\nJava/Spring과 React/TypeScript로 4년 5개월간 공공 스마트시티 플랫폼을 개발하며 GIS·실시간 관제·데이터 시각화에 강점을 쌓아왔고, 개발자의 편의가 아닌 사용자의 경험을 기준으로 생각하는 개발자를 목표로 하고 있습니다.",
+  bio: "아직 아무것도 모르던 시절, 대학교 졸업 과제로 제작한 Smart Farm을 완성했을 때의 기쁨을 잊지 못합니다.\n\n직접 만든 서비스가 점점 형태를 갖추고, 결국 사람들에게 보여질 수 있는 결과물이 되었을 때\n그 경험은 단순한 성취를 넘어 큰 전환점이 되었습니다.\n\n그 작은 경험이 지금의 저를 개발자의 길로 이끌었습니다.\n\n그렇게 저는 SPRING BOOT / JAVA 의 백엔드와 React / TypeScript등의 기술력을 갖춘 4년차 개발자가 되었습니다.",
   image: "/images/profile/avatar.jpg",
   contacts: [
     { type: "email", label: "jrj60417@naver.com", url: "mailto:jrj60417@naver.com" },
