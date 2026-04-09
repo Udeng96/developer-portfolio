@@ -360,6 +360,7 @@ export const projects: Project[] = [
         image: "/images/projects/namhae-ssc/5.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/namhae-ssc",
   },  {
     id: "company-2",
     category: "company",
@@ -406,6 +407,7 @@ export const projects: Project[] = [
         image: "/images/projects/gis/5.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/kaist-gis-campus",
   },
   {
     id: "company-1",
@@ -453,6 +455,7 @@ export const projects: Project[] = [
         image: "/images/projects/kiosk/4.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/kiosk",
   },
   {
     id: "company-3",
