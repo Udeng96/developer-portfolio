@@ -52,7 +52,10 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-bold mb-1 text-center">{profile.name}</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-1 text-center">
+          {profile.name}
+          <span className="ml-3 text-xl md:text-2xl font-medium text-muted">Jang You Jung</span>
+        </h1>
         <p className="text-accent font-medium mb-5 text-center">{profile.title}</p>
 
         <p className="text-sm text-muted leading-relaxed mb-8 text-center max-w-2xl mx-auto whitespace-pre-line">{profile.bio}</p>
