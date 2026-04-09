@@ -134,10 +134,6 @@ export const skills: SkillCategory[] = [
         name: "Next.js", level: 2, icon: "nextjs/nextjs-original.svg",
         tooltip: "App Router 기반 풀스택 개발 경험 (주간보고서 프로젝트). 서버 컴포넌트, 라우팅, API Routes 활용 가능. 이 포트폴리오 사이트도 Next.js로 제작.",
       },
-      {
-        name: "Tailwind CSS", level: 0.5, icon: "tailwindcss/tailwindcss-original.svg",
-        tooltip: "이 포트폴리오 프로젝트에서 유틸리티 클래스 기반 UI 구현. 다크모드, 반응형, 커스텀 테마 설정 경험. 실무 프로젝트는 주로 Styled Components 사용.",
-      },
     ],
   },
   {
@@ -163,10 +159,6 @@ export const skills: SkillCategory[] = [
         name: "Python", level: 0.5, icon: "python/python-original.svg",
         tooltip: "ServerWatch(PyQt5·Paramiko 기반 서버 모니터링)와 KISA 취약점 점검 도구(PyQt5·Paramiko·OpenPyXL)를 단독 기획·개발. 데스크톱 GUI 앱 및 SSH 자동화 스크립트 구현 경험.",
       },
-      {
-        name: "Fastify", level: 0.5, icon: "fastify/fastify-original.svg",
-        tooltip: "주간보고서 프로젝트 백엔드를 Fastify + Prisma + PostgreSQL로 구성. JWT 인증, CRUD API, 스키마 검증 구현.",
-      },
     ],
   },
   {
@@ -188,10 +180,6 @@ export const skills: SkillCategory[] = [
         name: "MariaDB", level: 2, icon: "mariadb/mariadb-original.svg",
         tooltip: "일부 프로젝트에서 MySQL 대체재로 사용. 기본 쿼리 및 연동 경험 수준.",
       },
-      {
-        name: "Prisma", level: 0.5, icon: "https://cdn.simpleicons.org/prisma",
-        tooltip: "주간보고서 프로젝트에서 Fastify + PostgreSQL 연동에 Prisma ORM 사용. 스키마 정의, 마이그레이션, 기본 CRUD 경험.",
-      },
     ],
   },
   {
@@ -212,10 +200,6 @@ export const skills: SkillCategory[] = [
       {
         name: "VWorld", level: 3,
         tooltip: "화성시·화성특례시 프로젝트에서 국토부 VWorld API 기반 지도 연동. 타일 레이어 설정, 주소 검색, 레이어 전환 구현.",
-      },
-      {
-        name: "GeoServer", level: 0.5,
-        tooltip: "성남시 프로젝트에서 GeoServer WMS/WFS 레이어를 Leaflet에 연동. 레이어 On/Off 제어, 범례 렌더링 구현.",
       },
     ],
   },
@@ -250,10 +234,6 @@ export const skills: SkillCategory[] = [
       {
         name: "Vite", level: 4, icon: "vitejs/vitejs-original.svg",
         tooltip: "화성특례시·CCTV 민원관리·베트남 땀끼시 등 다수 React 프로젝트의 빌드 도구. 개발 서버 설정, 프록시 구성, 빌드 최적화 경험.",
-      },
-      {
-        name: "Docker", level: 0.5, icon: "docker/docker-original.svg",
-        tooltip: "docker-compose를 활용한 PostgreSQL 개발 환경 구성 경험. 기본 컨테이너 실행 및 이미지 관리 수준.",
       },
     ],
   },
