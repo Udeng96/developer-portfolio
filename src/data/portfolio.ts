@@ -663,6 +663,7 @@ export const projects: Project[] = [
         image: "/images/projects/hwaseong-fps/4.png",
       },
     ],
+    githubUrl: "https://github.com/Udeng96/hwaseong-fps",
   },
   {
     id: "company-6",
