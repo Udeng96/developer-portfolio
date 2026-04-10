@@ -385,11 +385,15 @@ export const projects: Project[] = [
     teamSize: "1명 (단독 개발)",
     techStack: ["Spring Boot", "React", "Vite", "Zustand", "Swiper", "JPA"],
     highlights: [
-      "터치 최적화 멀티페이지 키오스크 UI 개발 (React + Zustand)",
-      "관광지·맛집·바래길 등 카테고리별 콘텐츠 관리 시스템 구축",
+      "단독으로 기획·프론트엔드·백엔드 전체 설계 및 구현",
+      "콘텐츠 관리자 페이지 개발 (파일 업로드·페이지 편집)",
+    ],
+    features: [
+      "터치 최적화 멀티페이지 키오스크 UI (React + Zustand + Swiper)",
+      "관광지·맛집·바래길 등 카테고리별 콘텐츠 안내",
       "CCTV 실시간 영상 스트리밍 연동",
       "기상청 API 연동 날씨 정보 제공",
-      "콘텐츠 관리자 페이지 개발 (파일 업로드·페이지 편집)",
+      "버스 노선 조회 기능",
     ],
     pages: [
       {
