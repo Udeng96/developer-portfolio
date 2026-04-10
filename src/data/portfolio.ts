@@ -359,11 +359,17 @@ export const projects: Project[] = [
     teamSize: "1명 (단독 개발)",
     techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebRTC", "Zustand", "STOMP"],
     highlights: [
-      "Leaflet + Proj4 기반 GIS 지도 시스템 구현",
-      "WebRTC 실시간 CCTV 영상 스트리밍 연동",
-      "STOMP WebSocket 기반 실시간 이벤트 알림 시스템",
-      "순찰 경로 관리 및 드래그앤드롭 UI 구현",
-      "시설물·건물·CCTV 마커 관리 및 범례 시스템 개발",
+      "단독으로 프론트엔드·백엔드 전체 설계 및 구현",
+      "WebRTC 영상 최적화 — 초기 호출 시간 8초→3초 단축, 동시 재생 3대→8대 개선",
+      "STOMP WebSocket 기반 실시간 이벤트 알림 시스템 구현",
+    ],
+    features: [
+      "Leaflet + Proj4 기반 GIS 지도 위 CCTV·건물·시설물 마커 표시",
+      "WebRTC 실시간 CCTV 영상 스트리밍 뷰어",
+      "이벤트 감지 및 실시간 알림 패널",
+      "순찰 경로 관리 및 드래그앤드롭 UI",
+      "즐겨찾기 등록 및 구역별 필터링",
+      "CCTV·시설물 등록 관리 어드민 기능",
     ],
     pages: [
       {
@@ -518,10 +524,15 @@ export const projects: Project[] = [
     techStack: ["Spring Boot", "Java", "React", "TypeScript", "Vite", "Leaflet", "VWorld", "Redux Toolkit", "JPA"],
     highlights: [
       "단독으로 프론트엔드·백엔드 전체 설계 및 구현",
-      "Leaflet + VWorld 기반 지도 위 민원 마커 표시 및 조건 검색",
-      "민원 유형·상태별 평가 항목 집계 및 통계 시각화",
       "시설물 관리 시스템(FMS) 연동 및 이벤트 현황 관리",
       "평가 데이터 Excel 다운로드 기능 구현",
+    ],
+    features: [
+      "Leaflet + VWorld 기반 지도 위 민원 발생 위치 마커 표시",
+      "민원 기간·지역·주소·처리 상태 조건 검색",
+      "민원 유형·상태별 평가 항목 집계 및 통계 시각화",
+      "CCTV 설치 추천 장소 등록 (지도 좌표 선택)",
+      "연도·행정동별 민원 발생 현황 월별 테이블",
     ],
     pages: [
       {
@@ -561,15 +572,16 @@ export const projects: Project[] = [
     techStack: ["Spring Boot", "Java", "JPA", "PostgreSQL", "React", "TypeScript", "Vite", "Leaflet", "Cesium", "Highcharts", "Redux Saga", "i18next"],
     purpose: "베트남 꽝남성 땀끼시의 스마트시티 인프라(경계 감시·방문자 분석·기상·조수위·Wi-Fi 등)를 통합 모니터링하고, 도시 운영 효율화를 위한 데이터 시각화 플랫폼 구축을 목적으로 개발되었습니다.",
     highlights: [
-      "Leaflet 기반 GIS 지도 위에 지역별 방문자 현황 마커 및 통계 차트 시각화",
-      "Cesium 3D GIS 연동으로 입체적인 도시 공간 데이터 표현",
-      "경계 침입 감지(Boundary Surveillance) — 구역별 침입·순찰 이벤트 실시간 감지 및 시간대별·주간·월간 통계",
-      "방문자 통계 — 지역별 방문자 수 GIS 지도 표시 및 일별·주별 추이 차트",
-      "기상 대시보드 — OpenWeatherMap API 연동, 현재 기온·습도·강수량 및 5일 예보 표시",
-      "조수위·Wi-Fi 현황 모니터링 모듈 개발",
-      "i18next 기반 영어·베트남어 다국어 지원",
       "Spring Boot + JPA + PostgreSQL 백엔드 REST API 설계 및 구현",
       "Highcharts 기반 시간대별·요일별·월별 복합 이벤트 통계 차트 구현",
+      "i18next 기반 영어·베트남어 다국어 지원",
+    ],
+    features: [
+      "경계 침입 감지(Boundary Surveillance) — 구역별 침입·순찰 이벤트 실시간 감지 및 통계",
+      "방문자 통계 — 지역별 방문자 수 GIS 지도 마커 표시 및 일별·주별 추이 차트",
+      "기상 대시보드 — OpenWeatherMap API 연동, 현재 기온·습도·강수량 및 5일 예보",
+      "조수위·Wi-Fi 현황 모니터링",
+      "Leaflet + Cesium 기반 GIS 지도 시각화",
     ],
     pages: [
       {
@@ -614,11 +626,14 @@ export const projects: Project[] = [
     techStack: ["Spring Boot", "Java", "JPA", "React", "TypeScript", "Leaflet", "Highcharts", "Redux Saga", "Styled Components"],
     purpose: "화성시 병점동 스마트시티 사업의 일환으로 스마트 가로등 디바이스 상태 관제와 유동인구(방문객·이동 경로) 분석을 단일 플랫폼에서 통합 제공하기 위해 개발되었습니다.",
     highlights: [
-      "스마트 가로등 모듈: Leaflet GIS 지도 위 가로등 디바이스 실시간 상태 마커 및 목록 패널 구현",
-      "유동인구 모듈: 위치별 방문객 수 마커 및 일별·주간·월간 통계 차트 구현",
       "leaflet.migration 라이브러리 활용 유입·유출 인구 이동 경로 시각화",
       "위치별 방문객 수 Highcharts 바 차트 + Excel 다운로드 기능 구현",
-      "체류 시간 분포(1~5분·6~10분 등) 도넛 차트 시각화",
+    ],
+    features: [
+      "스마트 가로등 — Leaflet GIS 지도 위 가로등 디바이스 실시간 상태 마커 및 목록 패널",
+      "유동인구 — 위치별 방문객 수 마커 및 일별·주간·월간 통계 차트",
+      "유입·유출 인구 이동 경로 시각화 (leaflet.migration)",
+      "체류 시간 분포 도넛 차트",
       "CCTV PTZ 플레이어 연동 — 방문객 마커 클릭 시 인근 영상 팝업",
     ],
     pages: [
@@ -661,11 +676,14 @@ export const projects: Project[] = [
     teamSize: "1명 (단독 개발)",
     techStack: ["Spring Boot", "Java", "React", "TypeScript", "Leaflet", "WebSocket", "JPA", "기상청 API"],
     highlights: [
-      "Leaflet 위성지도 기반 수위 센서 위치 실시간 시각화 (단계별 색상 마커)",
+      "단독으로 프론트엔드·백엔드 전체 설계 및 구현",
       "WebSocket 활용 이벤트 실시간 수신 및 통계 자동 갱신",
+      "IoT 센서·CCTV 관리 및 회원 권한 관리 백엔드 API 설계",
+    ],
+    features: [
+      "Leaflet 위성지도 기반 수위 센서 위치 실시간 시각화 (단계별 색상 마커)",
       "기상청 특보 API 연동 — 호우주의보·홍수경보 등 발령 현황 표시",
       "월별·일별·시간별 이벤트 발생 내역 테이블 및 수위 측정 차트",
-      "IoT 센서·CCTV 관리 및 회원 권한 관리 백엔드 API 설계",
     ],
     pages: [
       {
@@ -700,14 +718,16 @@ export const projects: Project[] = [
     techStack: ["Spring Boot", "Java", "MyBatis", "PostgreSQL", "WebSocket", "MQTT", "Quartz", "React", "TypeScript", "Webpack", "Leaflet", "Kakao Maps", "GeoServer", "Highcharts", "Redux Saga", "Zustand", "React Query", "MUI", "react-player"],
     purpose: "성남시 스마트시티 인프라(119·112·IOT·CCTV 등) 운영 효율화를 위해 GIS 기반 이벤트·영상·환경 데이터를 단일 플랫폼에서 통합 관제할 수 있도록 개발되었습니다.",
     highlights: [
-      "Kakao Maps 기반 GIS 지도 위에 119·112·부영이·IOT 등 10여 종 이벤트 실시간 마커 표시",
-      "이벤트 탭: 발생지역·타입·내용 복합 검색 및 100건+ 목록 실시간 조회",
-      "CCTV 탭: 선택 위치 주변 CCTV 6분할 동시 재생 (react-player)",
-      "스마트 안전 서비스 통계: 행정동별 이벤트 맵 + 유형별(부영이·119·112·NDMS 등) 집계",
-      "범례 탭: GeoServer 레이어 On/Off, Daum 지도 타입 전환, Wi-Fi 데이터 업로드·다운로드",
-      "상단바 실시간 기상정보(기온·습도·바람·미세먼지) 및 특보 마퀴 알림",
       "Spring WebSocket + Netty 기반 실시간 이벤트 수신 및 MQTT IoT 센서 연동",
       "Quartz 스케줄러 기반 주차·Wi-Fi 데이터 주기 수집, 다중 DB 연동",
+      "상단바 실시간 기상정보(기온·습도·바람·미세먼지) 및 특보 마퀴 알림 구현",
+    ],
+    features: [
+      "이벤트 탭: 발생지역·타입·내용 복합 검색 및 100건+ 목록 실시간 조회",
+      "CCTV 탭: 선택 위치 주변 CCTV 6분할 동시 재생",
+      "스마트 안전 서비스 통계: 행정동별 이벤트 맵 + 유형별 집계",
+      "범례 탭: GeoServer 레이어 On/Off, Daum 지도 타입 전환",
+      "Wi-Fi 데이터 업로드·다운로드 기능",
     ],
     pages: [
       {
@@ -749,10 +769,13 @@ export const projects: Project[] = [
     techStack: ["Spring Boot", "Kotlin", "Java", "React", "TypeScript", "Redux Saga", "Styled Components", "JPA"],
     highlights: [
       "기존 저품질 소스 전면 리팩토링 — FSD 디렉토리 구조 전환 및 타입 안정성 강화",
+      "Kotlin + Spring Boot 백엔드 → Java 전환 및 빌드 시스템 정비",
+    ],
+    features: [
       "재난 이벤트 발생 위치·유형·좌표를 Leaflet GIS 지도와 함께 실시간 표시",
       "SMS·공유 방식으로 유관기관 수신 대상 트리 선택 및 상황 전파",
-      "이벤트 목록 검색(일시·상태 필터), 조치 및 보고서 관리 기능",
-      "Kotlin + Spring Boot 백엔드 → Java 전환 및 빌드 시스템 정비",
+      "이벤트 목록 검색 (일시·상태 필터)",
+      "조치 및 보고서 관리 기능",
     ],
     pages: [
       {
@@ -779,17 +802,19 @@ export const projects: Project[] = [
       "/images/projects/reapi/1.png",
       "/images/projects/reapi/2.png",
     ],
-    period: { start: "2022.03", end: "2025.12" },
+    period: { start: "2022.03", end: "2022.12" },
     role: "풀스택 개발자",
     teamSize: "2명 (풀스택 2명)",
     techStack: ["Spring Boot", "Java", "Kotlin", "React", "TypeScript", "Leaflet", "Highcharts", "Redux Saga", "MUI", "react-player"],
     highlights: [
+      "Spring Boot + Kotlin 혼합 백엔드 API 설계 및 구현",
+      "2022~2025년 장기 운영 및 기능 고도화 유지보수",
+      "Highcharts 기반 이벤트·설비 통계 차트 시각화",
+    ],
+    features: [
       "재난 관제 모듈: Leaflet GIS 기반 재난·CCTV·모바일 이벤트 실시간 모니터링",
       "무인국사 관리(HAMS) 모듈: 국사별 CCTV 현황·실시간 상태 대시보드 및 GIS 연동",
       "목적별 CCTV 열람 모듈: 조건별 CCTV 검색 및 드래그앤드롭 레이아웃 영상 뷰어",
-      "Highcharts 기반 이벤트·설비 통계 차트 시각화",
-      "Spring Boot + Kotlin 혼합 백엔드 API 설계 및 구현",
-      "2022~2025년 장기 운영 및 기능 고도화 유지보수",
     ],
     pages: [
       {
@@ -821,13 +846,15 @@ export const projects: Project[] = [
     purpose: "내부망 Linux 서버 다수를 매번 SSH로 직접 접속해 수작업으로 점검하던 과정이 반복적이고 시간 소모가 컸습니다. 이 과정을 GUI 도구로 자동화하여 점검 시간을 2시간 → 30분으로 대폭 단축했습니다.",
     highlights: [
       "Claude AI를 활용한 전체 아키텍처 설계 및 코드 생성",
-      "SSH(Paramiko) 기반 다중 서버 원격 연결 및 서버 목록 저장·관리",
-      "Uptime·CPU·Memory·Disk 사용률을 실시간 게이지 카드로 시각화",
-      "ese@* 서비스·PostgreSQL·Nginx 서비스 상태 일괄 조회",
-      "파티션별 디스크 용량·사용률 테이블 제공",
-      "직접 셸 명령 전송 기능으로 즉각적인 서버 조작 가능",
       "PyInstaller 기반 macOS 단독 실행 앱(.app) 패키징",
       "점검 소요 시간 2시간 → 30분으로 단축",
+    ],
+    features: [
+      "SSH(Paramiko) 기반 다중 서버 원격 연결 및 서버 목록 저장·관리",
+      "Uptime·CPU·Memory·Disk 사용률 실시간 게이지 카드 시각화",
+      "ese@* 서비스·PostgreSQL·Nginx 서비스 상태 일괄 조회",
+      "파티션별 디스크 용량·사용률 테이블",
+      "직접 셸 명령 전송 기능",
     ],
     pages: [
       {
@@ -853,10 +880,12 @@ export const projects: Project[] = [
     highlights: [
       "Claude AI를 활용한 점검 항목별 명령어·판정 로직 설계 및 코드 생성",
       "SSH 원격 접속을 통한 실시간 보안 점검 자동화",
+      "스크린샷 포함 Excel 보고서 자동 생성",
+    ],
+    features: [
       "50개 KISA 점검 항목별 명령어 자동 입력·실행·캡처",
       "터미널 출력 기반 자동 판정 (양호/취약/해당없음)",
       "취약 항목 자동 조치 및 수동 확인 필요 항목 분리",
-      "스크린샷 포함 Excel 보고서 자동 생성",
       "다중 서버 순차 점검 지원",
     ],
   },
@@ -882,11 +911,14 @@ export const projects: Project[] = [
     highlights: [
       "Claude AI를 활용한 아키텍처 설계, 코드 생성 및 디버깅 전 과정 지원",
       "pnpm monorepo 기반 프론트엔드·백엔드·공통 타입 패키지 분리 구성",
+      "JWT 인증(회원가입·로그인·내 정보 조회) 시스템 개발",
+    ],
+    features: [
       "Next.js App Router + Zustand + React Query 기반 상태 관리",
       "Fastify + Prisma ORM 기반 REST API 서버 구현",
-      "JWT 인증(회원가입·로그인·내 정보 조회) 시스템 개발",
       "프로젝트·주간보고서 CRUD 기능 구현",
-      "Docker Compose 기반 PostgreSQL 개발 환경 구성",
+      "캘린더 기반 주 단위 업무 조회 및 AI 요약",
+      "연간 공수(M/M) 집계 및 프로젝트별 투입 현황 관리",
     ],
     pages: [
       {
