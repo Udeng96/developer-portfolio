@@ -130,6 +130,10 @@ export const skills: SkillCategory[] = [
         name: "Next.js", level: 0.5, icon: "nextjs/nextjs-original.svg",
         tooltip: "App Router 기반 풀스택 개발 경험 (주간보고서 프로젝트). 서버 컴포넌트, 라우팅, API Routes 활용 가능. 이 포트폴리오 사이트도 Next.js로 제작.",
       },
+      {
+        name: "Node.js", level: 3, icon: "nodejs/nodejs-original.svg",
+        tooltip: "Fastify 기반 API 서버 운영 및 Next.js 서버 사이드 로직 작성. npm 생태계·패키지 관리 능숙.",
+      },
     ],
   },
   {
