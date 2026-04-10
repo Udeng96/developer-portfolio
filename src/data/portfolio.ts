@@ -133,36 +133,6 @@ export const skills: SkillCategory[] = [
     ],
   },
   {
-    category: "Backend",
-    items: [
-      {
-        name: "Spring Boot", level: 5, icon: "spring/spring-original.svg",
-        tooltip: "전체 프로젝트의 80% 이상 백엔드를 Spring Boot로 개발. REST API 설계, 인증/인가, 외부 API 연동(기상청·VWorld·Zalo), 스케줄러, 파일 업로드 등 실무 전반 경험.",
-      },
-      {
-        name: "Java", level: 4, icon: "java/java-original.svg",
-        tooltip: "Spring Boot 프로젝트 전반의 주력 언어. JPA·MyBatis 엔티티 설계, 서비스 레이어 비즈니스 로직, 예외 처리 구조 등 실무 수준 활용.",
-      },
-      {
-        name: "Node.js", level: 3, icon: "nodejs/nodejs-original.svg",
-        tooltip: "Fastify 기반 API 서버 운영 및 Next.js 서버 사이드 로직 작성. npm 생태계·패키지 관리 능숙.",
-      },
-    ],
-  },
-  {
-    category: "Database",
-    items: [
-      {
-        name: "PostgreSQL", level: 4, icon: "postgresql/postgresql-original.svg",
-        tooltip: "남해군·성남시·베트남 땀끼시·주간보고서 등 다수 프로젝트에서 메인 DB로 활용. 복잡한 조인 쿼리, 인덱스 설계, JPA·MyBatis 연동 경험.",
-      },
-      {
-        name: "JPA", level: 4, icon: "https://cdn.simpleicons.org/hibernate",
-        tooltip: "Spring Boot 프로젝트 전반의 ORM. 연관관계 매핑, JPQL, N+1 문제 인식 및 해결 경험.",
-      },
-    ],
-  },
-  {
     category: "GIS & 시각화",
     items: [
       {
