@@ -355,8 +355,8 @@ export const projects: Project[] = [
       "/images/projects/gis/5.png",
     ],
     period: { start: "2025.04", end: "2025.12" },
-    role: "풀스택 개발자",
-    teamSize: "총 3명 (BE 1명, FE 2명)",
+    role: "풀스택 개발자 (단독 개발)",
+    teamSize: "1명 (단독 개발)",
     techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebRTC", "Zustand", "STOMP"],
     highlights: [
       "Leaflet + Proj4 기반 GIS 지도 시스템 구현",
