@@ -265,7 +265,7 @@ export const projects: Project[] = [
     period: { start: "2023.06", end: "2025.12" },
     role: "프로젝트 리더 / 풀스택 개발자",
     teamSize: "총 3명 (풀스택 3명)",
-    techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebSocket", "Zustand", "PostgreSQL", "Highcharts"],
+    techStack: ["React", "TypeScript", "Leaflet", "Zustand", "Highcharts", "Spring Boot", "WebSocket", "PostgreSQL"],
     highlights: [
       "프로젝트 리더로서 3인 팀 기술 방향 수립 및 일정 관리",
       "TTA 소프트웨어 품질인증(GS인증) 획득",
@@ -329,7 +329,7 @@ export const projects: Project[] = [
     period: { start: "2025.04", end: "2025.12" },
     role: "풀스택 개발자 (단독 개발)",
     teamSize: "1명 (단독 개발)",
-    techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebRTC", "Zustand", "STOMP"],
+    techStack: ["React", "TypeScript", "Leaflet", "WebRTC", "Zustand", "STOMP", "Spring Boot"],
     highlights: [
       "단독으로 프론트엔드·백엔드 전체 설계 및 구현",
       "WebRTC 영상 최적화 — 초기 호출 시간 8초→3초 단축, 동시 재생 3대→8대 개선",
@@ -383,7 +383,7 @@ export const projects: Project[] = [
     period: { start: "2025.01", end: "2025.03" },
     role: "기획 / 단독 풀스택 개발",
     teamSize: "1명 (단독 개발)",
-    techStack: ["Spring Boot", "React", "Vite", "Zustand", "Swiper", "JPA"],
+    techStack: ["React", "Vite", "Zustand", "Swiper", "Spring Boot", "JPA"],
     highlights: [
       "단독으로 기획·프론트엔드·백엔드 전체 설계 및 구현",
       "콘텐츠 관리자 페이지 개발 (파일 업로드·페이지 편집)",
@@ -436,7 +436,7 @@ export const projects: Project[] = [
     period: { start: "2024.04", end: "2024.06" },
     role: "단독 풀스택 개발",
     teamSize: "1명 (단독 개발)",
-    techStack: ["Spring Boot", "React", "TypeScript", "Vite", "Leaflet", "Zustand", "TanStack Query", "Highcharts", "WebSocket", "VWorld"],
+    techStack: ["React", "TypeScript", "Vite", "Leaflet", "Zustand", "TanStack Query", "Highcharts", "VWorld", "Spring Boot", "WebSocket"],
     highlights: [
       "단독으로 프론트엔드·백엔드 전체 설계 및 구현",
       "VWorld 타일맵 기반 GIS 지도 위 이벤트·CCTV 마커 실시간 렌더링",
@@ -497,7 +497,7 @@ export const projects: Project[] = [
     period: { start: "2024.03", end: "2024.03" },
     role: "단독 풀스택 개발",
     teamSize: "1명 (단독 개발)",
-    techStack: ["Spring Boot", "Java", "React", "TypeScript", "Vite", "Leaflet", "VWorld", "Redux Toolkit", "JPA"],
+    techStack: ["React", "TypeScript", "Vite", "Leaflet", "VWorld", "Redux Toolkit", "Spring Boot", "Java", "JPA"],
     highlights: [
       "단독으로 프론트엔드·백엔드 전체 설계 및 구현",
       "시설물 관리 시스템(FMS) 연동 및 이벤트 현황 관리",
@@ -545,7 +545,7 @@ export const projects: Project[] = [
     period: { start: "2023.08", end: "2024.04" },
     role: "풀스택 개발자",
     teamSize: "3명 (풀스택 3명)",
-    techStack: ["Spring Boot", "Java", "JPA", "PostgreSQL", "React", "TypeScript", "Vite", "Leaflet", "Cesium", "Highcharts", "Redux Saga", "i18next"],
+    techStack: ["React", "TypeScript", "Vite", "Leaflet", "Cesium", "Highcharts", "Redux Saga", "i18next", "Spring Boot", "Java", "JPA", "PostgreSQL"],
     purpose: "베트남 꽝남성 땀끼시의 스마트시티 인프라(경계 감시·방문자 분석·기상·조수위·Wi-Fi 등)를 통합 모니터링하고, 도시 운영 효율화를 위한 데이터 시각화 플랫폼 구축을 목적으로 개발되었습니다.",
     highlights: [
       "Spring Boot + JPA + PostgreSQL 백엔드 REST API 설계 및 구현",
@@ -599,7 +599,7 @@ export const projects: Project[] = [
     period: { start: "2023.07", end: "2025.02" },
     role: "풀스택 개발자",
     teamSize: "2명 (풀스택 2명)",
-    techStack: ["Spring Boot", "Java", "JPA", "React", "TypeScript", "Leaflet", "Highcharts", "Redux Saga", "Styled Components"],
+    techStack: ["React", "TypeScript", "Leaflet", "Highcharts", "Redux Saga", "Styled Components", "Spring Boot", "Java", "JPA"],
     purpose: "화성시 병점동 스마트시티 사업의 일환으로 스마트 가로등 디바이스 상태 관제와 유동인구(방문객·이동 경로) 분석을 단일 플랫폼에서 통합 제공하기 위해 개발되었습니다.",
     highlights: [
       "leaflet.migration 라이브러리 활용 유입·유출 인구 이동 경로 시각화",
@@ -650,7 +650,7 @@ export const projects: Project[] = [
     period: { start: "2023.06", end: "2023.12" },
     role: "단독 풀스택 개발",
     teamSize: "1명 (단독 개발)",
-    techStack: ["Spring Boot", "Java", "React", "TypeScript", "Leaflet", "WebSocket", "JPA", "기상청 API"],
+    techStack: ["React", "TypeScript", "Leaflet", "Spring Boot", "Java", "WebSocket", "JPA", "기상청 API"],
     highlights: [
       "단독으로 프론트엔드·백엔드 전체 설계 및 구현",
       "WebSocket 활용 이벤트 실시간 수신 및 통계 자동 갱신",
@@ -691,7 +691,7 @@ export const projects: Project[] = [
     period: { start: "2023.03", end: "2025.04" },
     role: "풀스택 개발자",
     teamSize: "3명 (풀스택 3명)",
-    techStack: ["Spring Boot", "Java", "MyBatis", "PostgreSQL", "WebSocket", "MQTT", "Quartz", "React", "TypeScript", "Webpack", "Leaflet", "Kakao Maps", "GeoServer", "Highcharts", "Redux Saga", "Zustand", "React Query", "MUI", "react-player"],
+    techStack: ["React", "TypeScript", "Webpack", "Leaflet", "Highcharts", "Redux Saga", "Zustand", "React Query", "MUI", "react-player", "Spring Boot", "Java", "MyBatis", "WebSocket", "MQTT", "Quartz", "PostgreSQL", "Kakao Maps", "GeoServer"],
     purpose: "성남시 스마트시티 인프라(119·112·IOT·CCTV 등) 운영 효율화를 위해 GIS 기반 이벤트·영상·환경 데이터를 단일 플랫폼에서 통합 관제할 수 있도록 개발되었습니다.",
     highlights: [
       "Spring WebSocket + Netty 기반 실시간 이벤트 수신 및 MQTT IoT 센서 연동",
@@ -742,7 +742,7 @@ export const projects: Project[] = [
     period: { start: "2022.05", end: "2026.03" },
     role: "단독 풀스택 개발 (리팩토링)",
     teamSize: "1명 (단독 개발)",
-    techStack: ["Spring Boot", "Kotlin", "Java", "React", "TypeScript", "Redux Saga", "Styled Components", "JPA"],
+    techStack: ["React", "TypeScript", "Redux Saga", "Styled Components", "Spring Boot", "Kotlin", "Java", "JPA"],
     highlights: [
       "기존 저품질 소스 전면 리팩토링 — FSD 디렉토리 구조 전환 및 타입 안정성 강화",
       "Kotlin + Spring Boot 백엔드 → Java 전환 및 빌드 시스템 정비",
@@ -781,7 +781,7 @@ export const projects: Project[] = [
     period: { start: "2022.03", end: "2022.12" },
     role: "풀스택 개발자",
     teamSize: "2명 (풀스택 2명)",
-    techStack: ["Spring Boot", "Java", "Kotlin", "React", "TypeScript", "Leaflet", "Highcharts", "Redux Saga", "MUI", "react-player"],
+    techStack: ["React", "TypeScript", "Leaflet", "Highcharts", "Redux Saga", "MUI", "react-player", "Spring Boot", "Java", "Kotlin"],
     highlights: [
       "Spring Boot + Kotlin 혼합 백엔드 API 설계 및 구현",
       "2022~2025년 장기 운영 및 기능 고도화 유지보수",
@@ -882,7 +882,7 @@ export const projects: Project[] = [
     period: { start: "2026.03", end: "2026.03" },
     role: "기획 / 풀스택 개발",
     teamSize: "1명 (단독 개발)",
-    techStack: ["Next.js", "TypeScript", "Fastify", "Prisma", "PostgreSQL", "Zustand", "React Query", "Tailwind CSS", "Claude AI"],
+    techStack: ["Next.js", "TypeScript", "Zustand", "React Query", "Fastify", "Prisma", "Claude AI", "PostgreSQL", "Tailwind CSS"],
     purpose: "회사에서 매주 금요일 해당 주 업무 내역을 정리해 제출해야 하며, 연말에는 프로젝트별 투입 M/M과 업무 내역을 취합해 별도로 보고해야 합니다. 프로젝트가 많아질수록 수기로 관리하기 어려워지는 문제를 해결하고, 주간보고 작성과 연간 공수 집계를 한 곳에서 효율적으로 관리하기 위해 제작했습니다.",
     highlights: [
       "Claude AI를 활용한 아키텍처 설계, 코드 생성 및 디버깅 전 과정 지원",
