@@ -290,7 +290,7 @@ export const projects: Project[] = [
       "/images/projects/namhae-ssc/4.png",
       "/images/projects/namhae-ssc/5.png",
     ],
-    period: { start: "2023.06", end: "2026.03" },
+    period: { start: "2023.06", end: "2025.12" },
     role: "프로젝트 리더 / 풀스택 개발자",
     teamSize: "총 3명 (풀스택 3명)",
     techStack: ["Spring Boot", "React", "TypeScript", "Leaflet", "WebSocket", "Zustand", "PostgreSQL", "Highcharts"],
