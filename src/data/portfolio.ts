@@ -123,10 +123,6 @@ export const skills: SkillCategory[] = [
         tooltip: "Styled Components, CSS Module, 일반 CSS 등 다양한 방식으로 커스텀 UI 구현. 반응형 레이아웃, 애니메이션, 복잡한 레이어 구조 설계 가능.",
       },
       {
-        name: "Redux Saga", level: 4,
-        tooltip: "성남시·베트남 땀끼시·경기도 통합관제 등 대규모 관제 플랫폼에서 비동기 사이드이펙트 관리에 활용. 복잡한 API 시퀀스·에러 핸들링·채널 패턴 경험.",
-      },
-      {
         name: "React Query", level: 3,
         tooltip: "주간보고서·성남시 프로젝트에서 서버 상태 캐싱·자동 갱신·로딩/에러 처리에 활용. Redux 대비 보일러플레이트 감소 효과를 실무에서 검증.",
       },
@@ -151,14 +147,6 @@ export const skills: SkillCategory[] = [
         name: "Node.js", level: 3, icon: "nodejs/nodejs-original.svg",
         tooltip: "Fastify 기반 API 서버 운영 및 Next.js 서버 사이드 로직 작성. npm 생태계·패키지 관리 능숙.",
       },
-      {
-        name: "MyBatis", level: 0.5,
-        tooltip: "성남시 gisapi 프로젝트 등에서 복잡한 SQL 쿼리가 필요한 경우 MyBatis 활용. 동적 쿼리, 다중 DB 매핑, 프로시저 연동 경험.",
-      },
-      {
-        name: "Python", level: 0.5, icon: "python/python-original.svg",
-        tooltip: "ServerWatch(PyQt5·Paramiko 기반 서버 모니터링)와 KISA 취약점 점검 도구(PyQt5·Paramiko·OpenPyXL)를 단독 기획·개발. 데스크톱 GUI 앱 및 SSH 자동화 스크립트 구현 경험.",
-      },
     ],
   },
   {
@@ -169,16 +157,8 @@ export const skills: SkillCategory[] = [
         tooltip: "남해군·성남시·베트남 땀끼시·주간보고서 등 다수 프로젝트에서 메인 DB로 활용. 복잡한 조인 쿼리, 인덱스 설계, JPA·MyBatis 연동 경험.",
       },
       {
-        name: "MySQL", level: 4, icon: "mysql/mysql-original.svg",
-        tooltip: "다수 공공 프로젝트의 주력 DB. 테이블 설계, 인덱스 최적화, JPA 엔티티 매핑 등 실무 전반 경험.",
-      },
-      {
         name: "JPA", level: 4, icon: "https://cdn.simpleicons.org/hibernate",
         tooltip: "Spring Boot 프로젝트 전반의 ORM. 연관관계 매핑, JPQL, N+1 문제 인식 및 해결 경험.",
-      },
-      {
-        name: "MariaDB", level: 2, icon: "mariadb/mariadb-original.svg",
-        tooltip: "일부 프로젝트에서 MySQL 대체재로 사용. 기본 쿼리 및 연동 경험 수준.",
       },
     ],
   },
@@ -192,10 +172,6 @@ export const skills: SkillCategory[] = [
       {
         name: "Highcharts", level: 4,
         tooltip: "이벤트 추이, 수위 시계열, 단계별 통계, 경계 침입 분석, 방문자 통계 등 다양한 차트 유형 구현. 성남시·베트남·남해군 등 5개 이상 프로젝트에서 실시간 데이터 연동.",
-      },
-      {
-        name: "Kakao Maps", level: 3,
-        tooltip: "성남시 스마트시티 통합플랫폼에서 Daum/Kakao Maps API 기반 GIS 지도 구현. 지도 타입 전환(일반·위성), 마커 클러스터링, 레이어 오버레이 경험.",
       },
       {
         name: "VWorld", level: 3,
@@ -226,10 +202,6 @@ export const skills: SkillCategory[] = [
       {
         name: "Git", level: 5, icon: "git/git-original.svg",
         tooltip: "모든 프로젝트에서 Git 버전 관리. 브랜치 전략, PR 코드 리뷰, 충돌 해결, GitLab CI 기초 활용.",
-      },
-      {
-        name: "Linux", level: 4, icon: "linux/linux-original.svg",
-        tooltip: "공공 프로젝트 운영 서버(CentOS·Ubuntu) 배포 및 관리. 서비스 등록, 로그 모니터링, 방화벽 설정, 쉘 스크립트 작성 경험.",
       },
       {
         name: "Vite", level: 4, icon: "vitejs/vitejs-original.svg",
